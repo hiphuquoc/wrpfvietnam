@@ -357,7 +357,7 @@ label.error {
   margin-right: calc(300px - 0.5rem);
   flex-wrap: wrap;
   justify-content: space-between;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #456;
@@ -524,7 +524,7 @@ html .content {
 }
 
 .titlePage {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #456;

@@ -5,7 +5,7 @@
     "src": "resources/sources/admin/style.scss"
   },
   "resources/sources/main/cart-first-view.scss": {
-    "file": "assets/cart-first-view-6f4a3208.css",
+    "file": "assets/cart-first-view-3227449d.css",
     "isEntry": true,
     "src": "resources/sources/main/cart-first-view.scss"
   },
@@ -15,7 +15,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/category-blog-first-view.scss": {
-    "file": "assets/category-blog-first-view-a29dd8fc.css",
+    "file": "assets/category-blog-first-view-0c6ed68d.css",
     "isEntry": true,
     "src": "resources/sources/main/category-blog-first-view.scss"
   },
@@ -24,28 +24,8 @@
     "isEntry": true,
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
-  "resources/sources/main/category-free-first-view.scss": {
-    "file": "assets/category-free-first-view-de2e0c38.css",
-    "isEntry": true,
-    "src": "resources/sources/main/category-free-first-view.scss"
-  },
-  "resources/sources/main/category-free-non-first-view.scss": {
-    "file": "assets/home-non-first-view-1a84b608.css",
-    "isEntry": true,
-    "src": "resources/sources/main/category-blog-non-first-view.scss"
-  },
-  "resources/sources/main/category-money-first-view.scss": {
-    "file": "assets/category-money-first-view-6b2dff8b.css",
-    "isEntry": true,
-    "src": "resources/sources/main/category-money-first-view.scss"
-  },
-  "resources/sources/main/category-money-non-first-view.scss": {
-    "file": "assets/home-non-first-view-1a84b608.css",
-    "isEntry": true,
-    "src": "resources/sources/main/category-blog-non-first-view.scss"
-  },
   "resources/sources/main/confirm-first-view.scss": {
-    "file": "assets/confirm-first-view-e905509b.css",
+    "file": "assets/confirm-first-view-dff42f99.css",
     "isEntry": true,
     "src": "resources/sources/main/confirm-first-view.scss"
   },
@@ -55,7 +35,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/freewallpaper-first-view.scss": {
-    "file": "assets/freewallpaper-first-view-b383c831.css",
+    "file": "assets/freewallpaper-first-view-c4ff9c53.css",
     "isEntry": true,
     "src": "resources/sources/main/freewallpaper-first-view.scss"
   },
@@ -65,7 +45,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/home-first-view.scss": {
-    "file": "assets/home-first-view-d074352a.css",
+    "file": "assets/home-first-view-55ad0c8c.css",
     "isEntry": true,
     "src": "resources/sources/main/home-first-view.scss"
   },
@@ -75,7 +55,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/page-first-view.scss": {
-    "file": "assets/page-first-view-40ee2e37.css",
+    "file": "assets/page-first-view-d9f60fdc.css",
     "isEntry": true,
     "src": "resources/sources/main/page-first-view.scss"
   },
@@ -85,7 +65,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/product-first-view.scss": {
-    "file": "assets/product-first-view-e42d0b53.css",
+    "file": "assets/product-first-view-10eab208.css",
     "isEntry": true,
     "src": "resources/sources/main/product-first-view.scss"
   },

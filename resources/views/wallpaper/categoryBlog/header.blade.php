@@ -1,4 +1,4 @@
-<header class="top_panel top_panel_custom top_panel_custom_809 top_panel_custom_header-default				 without_bg_image with_featured_image scheme_">
+<header class="top_panel top_panel_custom top_panel_custom_809 top_panel_custom_header-default without_bg_image with_featured_image scheme_">
     <div data-elementor-type="cpt_layouts" class="elementor elementor-section elementor-top-section elementor-element elementor-element-a9fd441 elementor-section-full_width scheme_dark sc_layouts_hide_on_mobile elementor-section-height-default elementor-section-height-default">
 
 

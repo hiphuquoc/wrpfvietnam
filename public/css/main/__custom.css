@@ -353,13 +353,14 @@ form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
 }
 body {
   font-family: "Dosis", sans-serif;
-  font-size: 1.28rem;
+  font-size: 1.35rem;
   font-weight: 500;
   font-style: normal;
   line-height: 1.5;
   text-decoration: none;
   text-transform: none;
   letter-spacing: 0.16px;
+  background: #f1ede1;
 }
 p,
 ul,
@@ -383,7 +384,7 @@ address,
 .wp-block-group.has-background .wp-block-group__inner-container > *,
 .post_item_single .post_content > figure {
   margin-top: 0em;
-  margin-bottom: 1.9em;
+  margin-bottom: 1.25rem;
 }
 h1,
 .front_page_section_caption {
@@ -398,41 +399,31 @@ h1,
   margin-top: 1.617em;
   margin-bottom: 0.4833em;
 }
-h2 {
+h2, h3, h4, h5, h6 {
   font-family: "Alatsi", sans-serif;
-  font-size: 4.286em;
   font-weight: 700;
   font-style: normal;
-  line-height: 0.91667em;
   text-decoration: none;
+  letter-spacing: 0px;  
+}
+h2 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0px;
-  margin-top: 1.952em;
-  margin-bottom: 0.5619em;
 }
 h3 {
-  font-family: "Alatsi", sans-serif;
-  font-size: 3.429em;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 0.9792em;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  margin-top: 2.245em;
-  margin-bottom: 0.62em;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 h4 {
-  font-family: "Alatsi", sans-serif;
-  font-size: 2.571em;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 1.0277em;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  margin-top: 2.6923em;
-  margin-bottom: 0.77em;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 h5 {
   font-family: "Alatsi", sans-serif;
@@ -584,14 +575,13 @@ ol.boxer_list li a,
 }
 .post_meta {
   font-family: "Alatsi", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
   font-style: normal;
-  line-height: 1.5em;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-top: 0.4em;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 600;
 }
 em,
 .post-date,
@@ -783,7 +773,7 @@ blockquote p,
 }
 body.edit-post-visual-editor {
   font-family: "Dosis", sans-serif !important;
-  font-size: 1rem;
+  font-size: 1.35rem;
   font-weight: 400;
   font-style: normal;
   line-height: 1.872em;

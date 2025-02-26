@@ -9,7 +9,7 @@
                <div class="elementor-widget-container">
                   <div id="trx_sc_title_1276766983" class="sc_title sc_title_default">
                      <span class="sc_item_subtitle sc_title_subtitle sc_align_center sc_item_subtitle_above sc_item_title_style_default">Đăng ký nhận</span>
-                     <h1 class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default sc_item_title_tag"><span class="sc_item_title_text">Bài học miễn phí <br> mỗi ngày</span></h1>
+                     <h1 class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default sc_item_title_tag"><span class="sc_item_title_text">Bản tin miễn phí từ <br/>Wrpfvietnam</span></h1>
                   </div>
                   <!-- /.sc_title -->		
                </div>

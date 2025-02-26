@@ -1,0 +1,568 @@
+$backgroundImage: 'https://hitour.vn/images/main/hitour-background.png';
+$height_headerMain : 75px;
+.headerMain {
+    position: fixed;
+    z-index: 103;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba($colorBackgroundLv1, 0.95);
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $height_headerMain;
+        position: relative;
+        max-width: 1600px;
+        &:after {
+            display: none;
+        }
+    }
+    &_item {
+        width: 100%;
+        > ul {
+            display: flex;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin: 0 !important;
+            > li {
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+                height: $height_headerMain;
+                cursor: pointer;
+                margin-top: 0 !important;
+                font-family: $fontTitle;
+                font-size: 1.3rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                &:hover {
+                    .megaMenu, .normalMenu {
+                        display: flex;
+                    }
+                }
+                &:not(:first-child){
+                    > a, > div:not(.megaMenu,.normalMenu) {
+                        > * {
+                            border-left: 1px solid rgba(255,255,255,0.2);
+                            padding-left: 2rem;
+                        }
+                    }
+                }
+                > a, > div:not(.megaMenu,.normalMenu) {
+                    align-items: center;
+                    display: flex;
+                    color: #f1ede1;
+                    // &:hover {
+                    //     color: #fff;
+                    // }
+                    > * {
+                        padding-right: 2rem;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                }
+                i {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 1199px){
+        &_item {
+            > ul {
+                > li {
+                    &:not(:first-child){
+                        > a, > div:not(.megaMenu,.normalMenu) {
+                            > * {
+                                padding-left: 0.8rem;
+                            }
+                        }
+                    }
+                    > a, > div:not(.megaMenu,.normalMenu) {
+                        > * {
+                            padding-right: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1023px){
+        display: none;
+    }
+}
+#nav-mobile {
+    display: none;
+}
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+        
+    &_bg {
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+        
+    &_main {
+        flex: 0 0 320px;
+        background: #fff;
+        padding: 15px;
+        
+        &__exit {
+            position:fixed;
+            top: 0;
+            right: 0;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            // color: #678;
+            // text-shadow: 1px 1px 1px $bg-03;
+        }
+            
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+            li {
+                list-style: none;
+                font-size: 15.5px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                
+                > a, > div {
+                    color: #567 !important;
+                    display: block;
+                    padding: 10px 0;
+                    width: calc(100% - 40px);
+                    
+                    i {
+                        margin-right: 20px;
+                        font-size: 16px;
+                        color: #789;
+                        width: 15px;
+                    }
+                }
+                > span {
+                    width: 40px;
+                    height: 40px;
+                    background: $bg-02;
+                    justify-content: center;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 5px;
+                    &:hover {
+                        background: $bg-03;
+                    }
+                    i {
+                        margin: 0;
+                        font-size: 0.8rem;
+                    }
+                }
+                > ul {
+                    padding-left: 30px;
+                    width: 100%;
+                }
+                ul {
+                    margin-left: 10px;
+                    border-left: 1px dashed $bg-04;
+                    > li {
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            color: $bg-04;
+                            top: 0.75rem;
+                            left: -1.75rem;
+                            content: "--";
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        > ul {
+            > li {
+                padding: 0.4rem 0;
+                &:not(:first-child){
+                    border-top: 1px solid $bg-04;
+                }
+                > ul {
+                    > li {
+                        ul {
+                            display: none;
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#nav-mobile {
+    display: none;
+}
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+        
+    &_bg {
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+        
+    &_main {
+        flex: 0 0 320px;
+        background: #fff;
+        padding: 15px;
+        
+        &__exit {
+            position:fixed;
+            top: 0;
+            right: 0;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            // color: #678;
+            // text-shadow: 1px 1px 1px $bg-03;
+        }
+            
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+            li {
+                list-style: none;
+                font-size: 15.5px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                
+                > a, > div {
+                    color: #567 !important;
+                    display: block;
+                    padding: 10px 0;
+                    width: calc(100% - 40px);
+                    
+                    i {
+                        margin-right: 20px;
+                        font-size: 16px;
+                        color: #789;
+                        width: 15px;
+                    }
+                }
+                > span {
+                    width: 40px;
+                    height: 40px;
+                    background: $bg-02;
+                    justify-content: center;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 5px;
+                    &:hover {
+                        background: $bg-03;
+                    }
+                    i {
+                        margin: 0;
+                        font-size: 0.8rem;
+                    }
+                }
+                > ul {
+                    padding-left: 30px;
+                    width: 100%;
+                }
+                ul {
+                    margin-left: 10px;
+                    border-left: 1px dashed $bg-04;
+                    > li {
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            color: $bg-04;
+                            top: 0.75rem;
+                            left: -1.75rem;
+                            content: "--";
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        > ul {
+            > li {
+                padding: 0.4rem 0;
+                &:not(:first-child){
+                    border-top: 1px solid $bg-04;
+                }
+                > ul {
+                    > li {
+                        ul {
+                            display: none;
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.logoMain {
+    background-image: url('https://wrpfvietnam.storage.googleapis.com/storage/images/logo-wrpfvietnam.webp');
+    background-size: 100% 100%;
+    flex: 0 0 95px;
+    width: 95px;
+    height: 95px;
+    display: flex;
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    translate: -50% 0 0;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px $colorBackgroundLv1;
+}
+.megaMenu {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    font-family: $fontTitle;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+    border-top: 4px solid $colorSLv1;
+    top: $height_headerMain;
+    z-index: 100;
+    &_title, &_content {
+        width: 100%;
+        ul {
+            line-height: 2;
+            margin: 0;
+            > li {
+                list-style: none;
+            }
+        }
+
+        &:first-child {
+            ul {
+                > li:not(:last-child) {
+                    border-bottom: 1px dashed $bg-04;
+                }
+            }
+        }
+    }
+    &_title {
+        > ul {
+            > li {
+                > a, > div {
+                    color: #567;
+                    border: none;
+                    box-shadow: none;
+                    font-weight: 500;
+                    justify-content: space-between;
+                    display: flex;
+                    width: 100%;
+                    padding: 8px 10px;
+                }
+
+                i {
+                    float: right;
+                    font-size: 1rem;
+                    margin-top: 5px;
+                }
+
+                &:hover {
+                    @include colorOpacity('background', $colorLv1, 0.1);
+                    cursor: pointer;
+
+                    a {
+                        color: $colorLv1;
+                    }
+                }
+
+                &.selected {
+                    @include colorOpacity('background', $colorLv1, 0.1);
+                    cursor: pointer;
+
+                    > a, > div {
+                        color: $colorLv1;
+                    }
+                }
+            }
+        }
+    }
+
+    &_content {
+        border-left: 1px solid $bg-04;
+
+        > ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            margin: 0;
+
+            &:not(:first-child) {
+                display: none;
+            }
+
+            > li {
+                width: 100%;
+
+                a {
+                    font-weight: normal;
+                    color: $colorLv1;
+                    border: none;
+                    box-shadow: none;
+                }
+
+                ul {
+                    line-height: 2.3;
+                    margin: 0;
+
+                    > li {
+                        &:hover {
+                            @include colorOpacity('background', $colorLv1, 0.1);
+                        }
+
+                        a {
+                            padding: 6px 15px;
+                            display: block;
+                        }
+                    }
+                }
+
+                &:not(:first-child){
+                    border-left: 1px solid $bg-04;
+                }
+            }
+
+            li {
+                cursor: pointer;
+            }
+        }
+    }
+}
+$width_normalMenu : 250px;
+.normalMenu {
+    font-size: 1.15rem;
+    font-family: $fontTitle;
+    box-shadow: 1px 1px 7px $colorBackgroundLv1;
+    border-top: 3px solid $colorLv1;
+    position: absolute;
+    width: $width_normalMenu;
+    z-index: 1;
+    display: none;
+    top: $height_headerMain;
+    
+    &.right {
+        right: 0;
+        
+        > ul {
+            > li {
+                ul {
+                    left: auto;
+                    right: 200px;
+                }
+            }
+        }
+    }
+    
+    > ul {
+        width: 100%;
+        line-height: 2;
+        margin: 0;
+        padding: 0;
+        > li {
+            list-style: none;
+            cursor: pointer;
+            position: relative;
+            background: rgba($colorBackgroundLv1, 0.9);
+            margin: 0;
+            &:not(:last-child){
+                border-bottom: 1px solid #000;
+            }
+            
+            &:hover {
+                background: rgba($colorBackgroundLv1, 1);
+                ul {
+                    display: block;
+                }
+                a, div {
+                    color: $colorText;
+                }
+            }
+            
+            > a, > div {
+                display: block;
+                padding: 10px 15px;
+                color: $colorText;
+                font-weight: 500;
+                i {
+                    float: right;
+                    font-size: 1rem;
+                    margin-top: 5px;
+                }
+            }
+            
+            ul {
+                position: absolute;
+                top: -3px;
+                left: $width_normalMenu;
+                width: 310px;
+                margin: 0;
+                padding: 0;
+                box-shadow: 1px 1px 7px $colorBackgroundLv1;
+                display: none;
+                border-top: 3px solid $colorLv1;
+                li {
+                    background: rgba($colorBackgroundLv1, 0.9);
+                    list-style: none;
+                    cursor: pointer;
+                    position: relative;
+                    
+                    &:hover {
+                        background: rgba($colorBackgroundLv1, 1);
+                        a, div {
+                            color: $colorText;
+                        }
+                    }
+                    
+                    a {
+                        display: block;
+                        padding: 10px 15px;
+                        color: $colorText;
+                        font-weight: 500;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

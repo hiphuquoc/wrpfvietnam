@@ -21,68 +21,41 @@
             </div>
             <div class="elementor-element elementor-element-dbb9345 sc_fly_static elementor-invisible elementor-widget elementor-widget-trx_sc_blogger" data-id="dbb9345" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;}" data-widget_type="trx_sc_blogger.default">
                <div class="elementor-widget-container">
-                  <div  id="trx_sc_blogger_1190476022"		class="sc_blogger sc_blogger_default sc_blogger_default_classic">
+                  <div id="trx_sc_blogger_1190476022" class="sc_blogger sc_blogger_default sc_blogger_default_classic">
                      <div class="sc_blogger_content sc_item_content sc_item_posts_container">
-                        <div class="sc_blogger_item sc_blogger_item_default sc_blogger_item_default_classic sc_blogger_item_odd sc_blogger_item_align_none post_format_standard sc_blogger_item_with_image sc_blogger_item_image_position_left post-3050 post type-post status-publish format-standard has-post-thumbnail hentry category-karate tag-fights tag-ring tag-updates" data-item-number="1"
-                           >
-                           <div class="sc_blogger_item_body">
-                              <div class="post_featured with_thumb hover_dots sc_item_featured sc_blogger_item_featured trx_addons_inline_1177190236 post_featured_bg rumble_inline_1880539680" data-ratio="1:1">
-                                 <div class="mask"></div>
-                                 <a href="#"  aria-hidden="true" class="icons"><span></span><span></span><span></span></a>
-                              </div>
-                              <div class="sc_blogger_item_content entry-content trx_addons_inline_649601282">
-                                 <h5 class="sc_blogger_item_title entry-title"  data-item-number="1"><a href="#" rel="bookmark">Documentary Film &#8220;The Fighter of the Year&#8221;</a></h5>
-                                 <div class="post_meta sc_blogger_item_meta post_meta">
-                                    <span class="post_meta_item post_date">October 6, 2020</span> 		
+
+                        @foreach($blogs as $blog)
+                           @php
+                              $title   = $blog->seos[0]->infoSeo->title ?? '';
+                              $url     = '/'.$blog->seos[0]->infoSeo->slug_full;
+                           @endphp
+                           <div class="sc_blogger_item sc_blogger_item_default sc_blogger_item_default_classic sc_blogger_item_odd sc_blogger_item_align_none post_format_standard sc_blogger_item_with_image sc_blogger_item_image_position_left post-3050 post type-post status-publish format-standard has-post-thumbnail hentry category-karate tag-fights tag-ring tag-updates">
+                              <div class="sc_blogger_item_body">
+                                 <div class="post_featured with_thumb hover_dots sc_item_featured sc_blogger_item_featured trx_addons_inline_1177190236 post_featured_bg rumble_inline_1880539680" style="background-image: url('{{ \App\Helpers\Image::getUrlImageSmallByUrlImage($blog->seo->image) }}');">
+                                    <div class="mask"></div>
+                                    <a href="{{ $url }}" aria-hidden="true" class="icons">
+                                       <span></span>
+                                       <span></span>
+                                       <span></span>
+                                    </a>
                                  </div>
-                                 <!-- .post_meta -->
-                                 <div class="sc_blogger_item_excerpt">We have our own opinion on the matter. Some of our trainees can be easily named as the best fighters&hellip;</div>
-                              </div>
-                              <!-- .entry-content -->
-                           </div>
-                           <!-- .sc_blogger_item_body -->
-                        </div>
-                        <!-- .sc_blogger_item -->
-                        <div class="sc_blogger_item sc_blogger_item_default sc_blogger_item_default_classic sc_blogger_item_even sc_blogger_item_align_none post_format_standard sc_blogger_item_with_image sc_blogger_item_image_position_left post-3054 post type-post status-publish format-standard has-post-thumbnail hentry category-karate tag-fights tag-ring tag-updates" data-item-number="2"
-                           >
-                           <div class="sc_blogger_item_body">
-                              <div class="post_featured with_thumb hover_dots sc_item_featured sc_blogger_item_featured trx_addons_inline_1012907892 post_featured_bg rumble_inline_1561366690" data-ratio="1:1">
-                                 <div class="mask"></div>
-                                 <a href="#"  aria-hidden="true" class="icons"><span></span><span></span><span></span></a>
-                              </div>
-                              <div class="sc_blogger_item_content entry-content trx_addons_inline_21111603">
-                                 <h5 class="sc_blogger_item_title entry-title"  data-item-number="2"><a href="#" rel="bookmark">WKF CHAMPION OFFICIALLY APPEALED TO RUMBLE</a></h5>
-                                 <div class="post_meta sc_blogger_item_meta post_meta">
-                                    <span class="post_meta_item post_date">October 6, 2020</span> 		
+                                 <div class="sc_blogger_item_content entry-content trx_addons_inline_649601282">
+                                    <h5 class="sc_blogger_item_title entry-title maxLine_2">
+                                       <a href="{{ $url }}" rel="bookmark">
+                                          {{ $title }}
+                                       </a>
+                                    </h5>
+                                    <div class="post_meta sc_blogger_item_meta post_meta">
+                                       <span class="post_meta_item post_date">{{ date('d \t\h\á\n\g m\, Y', strtotime($blog->seos[0]->infoSeo->created_at)) }}</span> 		
+                                    </div>
+                                    <div class="sc_blogger_item_excerpt maxLine_2">
+                                       {!! !empty($blog->seos[0]->infoSeo->contents[0]->content) ? strip_tags($blog->seos[0]->infoSeo->contents[0]->content) : '' !!}
+                                    </div>
                                  </div>
-                                 <!-- .post_meta -->
-                                 <div class="sc_blogger_item_excerpt">Taking part in the world championship tournaments is probably the most important event in the entire life of every sportsman.&hellip;</div>
                               </div>
-                              <!-- .entry-content -->
                            </div>
-                           <!-- .sc_blogger_item_body -->
-                        </div>
-                        <!-- .sc_blogger_item -->
-                        <div class="sc_blogger_item sc_blogger_item_default sc_blogger_item_default_classic sc_blogger_item_odd sc_blogger_item_align_none post_format_standard sc_blogger_item_with_image sc_blogger_item_image_position_left post-3057 post type-post status-publish format-standard has-post-thumbnail hentry category-karate tag-fights tag-ring tag-updates" data-item-number="3"
-                           >
-                           <div class="sc_blogger_item_body">
-                              <div class="post_featured with_thumb hover_dots sc_item_featured sc_blogger_item_featured trx_addons_inline_317497322 post_featured_bg rumble_inline_34298269" data-ratio="1:1">
-                                 <div class="mask"></div>
-                                 <a href="#"  aria-hidden="true" class="icons"><span></span><span></span><span></span></a>
-                              </div>
-                              <div class="sc_blogger_item_content entry-content trx_addons_inline_125202356">
-                                 <h5 class="sc_blogger_item_title entry-title"  data-item-number="3"><a href="#" rel="bookmark">RUMBLE IS THE BEST FIGHTER ACCORDING TO SPORT LEAGUE</a></h5>
-                                 <div class="post_meta sc_blogger_item_meta post_meta">
-                                    <span class="post_meta_item post_date">October 6, 2020</span> 		
-                                 </div>
-                                 <!-- .post_meta -->
-                                 <div class="sc_blogger_item_excerpt">The exact evolution of karate art is lost due to the lack of information being written down which is unsurprising&hellip;</div>
-                              </div>
-                              <!-- .entry-content -->
-                           </div>
-                           <!-- .sc_blogger_item_body -->
-                        </div>
-                        <!-- .sc_blogger_item -->
+                        @endforeach
+
                      </div>
                   </div>
                </div>

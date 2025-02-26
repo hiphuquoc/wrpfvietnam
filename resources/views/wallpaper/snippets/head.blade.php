@@ -32,6 +32,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Arizonia&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
 <!-- CSS Khung nhìn đầu tiên - Inline Css -->
+@stack('cssFirstView')
+<!-- Css tải sau -->
+@stack('headCustom')
+<!-- style -->
+<link property="stylesheet" rel='stylesheet' id='trx_addons-css' href='{{ asset('css/main/__styles.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rumble-main-css' href='{{ asset('css/main/style.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='elementor-frontend-css' href='{{ asset('css/main/frontend.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='trx_socials-widget_instagram-css' href='{{ asset('css/main/instagram.css') }}?{{ time() }}' type='text/css' media='all' />
+<!-- hiệu ứng -->
+<link property="stylesheet" rel='stylesheet' id='e-animation-zoomIn-css' href='{{ asset('css/main/zoomIn.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='e-animation-bounceInLeft-css' href='{{ asset('css/main/bounceInLeft.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='e-animation-bounceInRight-css' href='{{ asset('css/main/bounceInRight.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='e-animation-rotateInDownLeft-css' href='{{ asset('css/main/rotateInDownLeft.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='e-animation-slideInUp-css' href='{{ asset('css/main/slideInUp.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='e-animation-fadeInUp-css' href='{{ asset('css/main/fadeInUp.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='e-animation-fadeInDown-css' href='{{ asset('css/main/fadeInDown.min.css') }}?{{ time() }}' type='text/css' media='all' />
+<!-- sản phẩm -->
+<link property="stylesheet" rel='stylesheet' id='rumble-plugins-css' href='{{ asset('css/main/__plugins.css') }}?{{ time() }}' type='text/css' media='all' />
+<!-- color -->
+<link property="stylesheet" rel='stylesheet' id='rumble-color-default-css' href='{{ asset('css/main/__colors-default.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rumble-color-dark-css' href='{{ asset('css/main/__colors-dark.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rumble-color-default_blue-css' href='{{ asset('css/main/__colors-default_blue.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rumble-color-dark_blue-css' href='{{ asset('css/main/__colors-dark_blue.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rumble-color-default_orange-css' href='{{ asset('css/main/__colors-default_orange.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rumble-color-dark_orange-css' href='{{ asset('css/main/__colors-dark_orange.css') }}?{{ time() }}' type='text/css' media='all' />
+<!-- custom -->
+<link property="stylesheet" rel='stylesheet' id='rumble-custom-css' href='{{ asset('css/main/__custom.css') }}?{{ time() }}' type='text/css' media='all' />
+<!-- responsive -->
+<link property="stylesheet" rel='stylesheet' id='trx_addons-responsive-css' href='{{ asset('css/main/__responsive.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rumble-responsive-css' href='{{ asset('css/main/__responsive_2.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='font-awesome-official-v4shim-css' href='{{ asset('css/main/v4-shims.css') }}?{{ time() }}' type='text/css' media='all' />
+<link property="stylesheet" rel='stylesheet' id='rs-plugin-settings-css' href='{{ asset('css/main/rs6.css') }}?{{ time() }}' type='text/css' media='all' />
+<!-- css -->
+@include('wallpaper.snippets.cssInline')
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}" id="jquery-core-js"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-migrate.min.js') }}" id="jquery-migrate-js"></script>
 <script type="text/javascript">
@@ -91,38 +125,3 @@
     //});
   };
 </script>
-@stack('cssFirstView')
-<!-- Css tải sau -->
-@stack('headCustom')
-
-<!-- style -->
-<link property="stylesheet" rel='stylesheet' id='trx_addons-css' href='{{ asset('css/main/__styles.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rumble-main-css' href='https://rumble.ancorathemes.com/wp-content/themes/rumble/style.css' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='elementor-frontend-css' href='{{ asset('css/main/frontend.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='trx_socials-widget_instagram-css' href='{{ asset('css/main/instagram.css') }}?{{ time() }}' type='text/css' media='all' />
-<!-- hiệu ứng -->
-<link property="stylesheet" rel='stylesheet' id='e-animation-zoomIn-css' href='{{ asset('css/main/zoomIn.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='e-animation-bounceInLeft-css' href='{{ asset('css/main/bounceInLeft.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='e-animation-bounceInRight-css' href='{{ asset('css/main/bounceInRight.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='e-animation-rotateInDownLeft-css' href='{{ asset('css/main/rotateInDownLeft.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='e-animation-slideInUp-css' href='{{ asset('css/main/slideInUp.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='e-animation-fadeInUp-css' href='{{ asset('css/main/fadeInUp.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='e-animation-fadeInDown-css' href='{{ asset('css/main/fadeInDown.min.css') }}?{{ time() }}' type='text/css' media='all' />
-<!-- sản phẩm -->
-<link property="stylesheet" rel='stylesheet' id='rumble-plugins-css' href='{{ asset('css/main/__plugins.css') }}?{{ time() }}' type='text/css' media='all' />
-<!-- color -->
-<link property="stylesheet" rel='stylesheet' id='rumble-color-default-css' href='{{ asset('css/main/__colors-default.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rumble-color-dark-css' href='{{ asset('css/main/__colors-dark.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rumble-color-default_blue-css' href='{{ asset('css/main/__colors-default_blue.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rumble-color-dark_blue-css' href='{{ asset('css/main/__colors-dark_blue.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rumble-color-default_orange-css' href='{{ asset('css/main/__colors-default_orange.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rumble-color-dark_orange-css' href='{{ asset('css/main/__colors-dark_orange.css') }}?{{ time() }}' type='text/css' media='all' />
-<!-- custom -->
-<link property="stylesheet" rel='stylesheet' id='rumble-custom-css' href='{{ asset('css/main/__custom.css') }}?{{ time() }}' type='text/css' media='all' />
-<!-- responsive -->
-<link property="stylesheet" rel='stylesheet' id='trx_addons-responsive-css' href='{{ asset('css/main/__responsive.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rumble-responsive-css' href='{{ asset('css/main/__responsive_2.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='font-awesome-official-v4shim-css' href='{{ asset('css/main/v4-shims.css') }}?{{ time() }}' type='text/css' media='all' />
-<link property="stylesheet" rel='stylesheet' id='rs-plugin-settings-css' href='{{ asset('css/main/rs6.css') }}?{{ time() }}' type='text/css' media='all' />
-<!-- css -->
-@include('wallpaper.snippets.cssInline')

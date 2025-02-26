@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Route;
 use App\Models\Page;
-use App\Models\Category;
+use App\Models\CategoryBlog;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\Admin\HelperController;
+use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TranslateController;
-use App\Models\ISO3166;
+use App\Models\Blog;
 use App\Models\Tag;
 use App\Models\Seo;
 use App\Models\SeoContent;
@@ -27,6 +28,8 @@ use GuzzleHttp\Client;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendProductMail;
+
+use App\Services\BuildInsertUpdateModel;
 
 // use App\Models\RelationSeoTagInfo;
 // use App\Models\RelationSeoPageInfo;
@@ -68,10 +71,28 @@ class HomeController extends Controller {
                     }
                 }
             }
-            $categories     = Category::select('*')
+            $categoriesBlog = CategoryBlog::select('*')
                                 ->where('flag_show', 1)
                                 ->get();
-            $xhtml      = view('wallpaper.home.index', compact('item', 'itemSeo', 'language', 'categories'))->render();
+            /* blogs */
+            $events         = Blog::select('*')
+                                ->whereHas('categories.infoCategory.seos.infoSeo', function($query){
+                                    $query->where('slug', 'giai-dau');
+                                })
+                                ->orderBy('id', 'DESC')
+                                ->skip(0)
+                                ->take(3)
+                                ->get();
+            /* blogs */
+            $blogs          = Blog::select('*')
+                                ->whereHas('categories.infoCategory.seos.infoSeo', function($query){
+                                    $query->where('slug', 'tin-tuc');
+                                })
+                                ->orderBy('id', 'DESC')
+                                ->skip(0)
+                                ->take(3)
+                                ->get();
+            $xhtml          = view('wallpaper.home.index', compact('item', 'itemSeo', 'language', 'categoriesBlog', 'blogs', 'events'))->render();
             /* Ghi dữ liệu - Xuất kết quả */
             if(env('APP_CACHE_HTML')==true) Storage::put(config('main_'.env('APP_NAME').'.cache.folderSave').$nameCache, $xhtml);
         }
@@ -79,8 +100,38 @@ class HomeController extends Controller {
     }
 
     public static function test(Request $request){
-        $language = 'vi';
-        return view('wallpaper.home.index', compact('language'))->render();
+        $products   = Category::select('*')
+                        ->whereHas('seo', function($query){
+                            $query->where('slug', '!=', 'hinh-nen-dien-thoai');
+                        })
+                        ->get();
+        $i          = 0;
+        foreach($products as $product){
+            if($i!=0){
+                
+                // /* xóa ảnh đại diện trên google_clouds */ 
+                // if(!empty($product->seo->image)) Upload::deleteWallpaper($product->seo->image);
+                /* delete relation */
+                $product->products()->delete();
+                $product->freeWallpapers()->delete();
+                $product->files()->delete();
+                $product->tags()->delete();
+                /* delete các trang seos ngôn ngữ */
+                foreach($product->seos as $s){
+                    // /* xóa ảnh đại diện trên google_clouds */ 
+                    // if(!empty($s->infoSeo->image)) Upload::deleteWallpaper($s->infoSeo->image);
+                    if(!empty($s->infoSeo->contents)) foreach($s->infoSeo->contents as $c) $c->delete();
+                    $s->infoSeo()->delete();
+                    $s->delete();
+                }
+                $product->delete();
+
+            }
+            ++$i;
+        }
+                    
+
+        dd(123);
         
     }
 

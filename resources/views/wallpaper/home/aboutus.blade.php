@@ -36,7 +36,7 @@
             <div class="elementor-element elementor-element-fe1ce45 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="fe1ce45" data-element_type="widget" data-widget_type="trx_sc_button.default">
                <div class="elementor-widget-container">
                   <div id="trx_sc_button_1395424299"	class="sc_item_button sc_button_wrap sc_align_center">
-                     <a href="#" class="sc_button sc_button_default sc_button_size_large sc_button_icon_left color_style_link2">
+                     <a href="/ve-wrpfvietnam" class="sc_button sc_button_default sc_button_size_large sc_button_icon_left color_style_link2">
                         <span class="sc_button_text"><span class="sc_button_title">Xem chi tiết</span></span><!-- /.sc_button_text -->
                      </a>
                      <!-- /.sc_button -->

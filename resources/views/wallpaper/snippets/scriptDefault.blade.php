@@ -27,18 +27,20 @@
         /* check để xem có cookie csrf chưa (do lần đầu truy cập trang không có lỗi google login) */
         // checkToSetCsrfFirstTime();
         
-        /* lazyload ảnh lần đầu */
-        lazyload();
-        /* lazyload ảnh khi scroll */
-        $(window).on('scroll', function() {
-            lazyload();
-        });
+        // /* lazyload ảnh lần đầu */
+        // lazyload();
+        // /* lazyload ảnh khi scroll */
+        // $(window).on('scroll', function() {
+        //     lazyload();
+        // });
         
-        /* tải lại view sort cart */
-        viewSortCart();
+        // /* tải lại view sort cart */
+        // viewSortCart();
 
-        /* check login để hiện thị button */
-        checkLoginAndSetShow();
+        // /* check login để hiện thị button */
+        // checkLoginAndSetShow();
+
+        buildTocContentMain('js_buildTocContentMain_element');
 
     });
     
@@ -455,4 +457,93 @@
             console.error("Fetch request failed:", error);
         });
     }
+    /* toc content */
+    function buildTocContentMain(idElement) {
+        fixedTocContentIcon();
+        setHeightTocFixed();
+
+        window.addEventListener('resize', function() {
+            fixedTocContentIcon();
+            setHeightTocFixed();
+        });
+
+        document.querySelectorAll('.tocFixedIcon, .tocContentMain.tocFixed .tocContentMain_close').forEach(function(element) {
+            element.addEventListener('click', function() {
+                let elementMenu = document.querySelector('.tocContentMain.tocFixed');
+                if (elementMenu.style.display === 'none' || elementMenu.style.display === '') {
+                    elementMenu.style.display = 'block';
+                } else {
+                    elementMenu.style.display = 'none';
+                }
+            });
+        });
+
+        document.querySelectorAll('.tocContentMain_title, .tocContentMain_close').forEach(function(element) {
+            element.addEventListener('click', function() {
+                let elemtMenu = document.querySelector('.tocContentMain .tocContentMain_list');
+                let closeBtn = document.querySelector('.tocContentMain_close');
+                if (elemtMenu.style.display === 'none' || elemtMenu.style.display === '') {
+                    elemtMenu.style.display = 'block';
+                    closeBtn.classList.remove('hidden');
+                } else {
+                    elemtMenu.style.display = 'none';
+                    closeBtn.classList.add('hidden');
+                }
+            });
+        });
+
+        function fixedTocContentIcon() {
+            const elemtBox = document.getElementById('js_buildTocContentMain_element');
+            if (!elemtBox) return;
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            const positionBox = isRTL 
+                ? window.innerWidth - elemtBox.getBoundingClientRect().left - elemtBox.offsetWidth
+                : elemtBox.getBoundingClientRect().left;
+
+            let tocFixedIcon = document.querySelector('.tocFixedIcon');
+            if (tocFixedIcon) {
+                if (isRTL) {
+                    tocFixedIcon.style.right = (positionBox - 50) + 'px';
+                } else {
+                    tocFixedIcon.style.left = (positionBox - 50) + 'px';
+                }
+            }
+        }
+
+        function setHeightTocFixed() {
+            let heightToc = window.innerHeight - 210;
+            let tocList = document.querySelector('.tocContentMain.tocFixed .tocContentMain_list');
+            if (tocList) {
+                tocList.style.height = heightToc + 'px';
+                tocList.style.maxHeight = 'unset';
+            }
+        }
+
+        let element = document.getElementById('tocContentMain');
+        if (element) {
+            let boxContent = document.getElementById(idElement);
+            if (!boxContent) return;
+            let heightB = boxContent.offsetHeight;
+            window.addEventListener('scroll', function() {
+                let positionB = boxContent.getBoundingClientRect().top + window.scrollY;
+                let heightFooter = document.querySelector('.copyright')?.offsetHeight || 0;
+                let positionE = element.getBoundingClientRect().top + window.scrollY;
+                let heightE = element.offsetHeight;
+                let scrollNow = document.documentElement.scrollTop || document.body.scrollTop;
+                let minScroll = heightE + positionE;
+                let maxScroll = heightB + positionB - heightFooter;
+                let tocFixedIcon = document.querySelector('.tocFixedIcon');
+                let tocFixed = document.querySelector('.tocFixed');
+
+                if (scrollNow > minScroll && scrollNow < maxScroll) {
+                    if (tocFixedIcon) tocFixedIcon.style.display = 'block';
+                    let width = document.querySelector('.layoutHeaderSide_header')?.offsetWidth || 0;
+                    if (tocFixed) tocFixed.style.width = width + 'px';
+                } else {
+                    if (tocFixedIcon) tocFixedIcon.style.display = 'none';
+                }
+            });
+        }
+    }
+
 </script>

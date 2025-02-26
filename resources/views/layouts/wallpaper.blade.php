@@ -13,13 +13,11 @@
         
         <div class="page_wrap">
             <!-- menu header -->
-            @include('wallpaper.home.header')
-
-            @include('wallpaper.home.headerMobile')
+            @include('wallpaper.snippets.headerTop')
 
             <div class="page_content_wrap">
                 <div class="content_wrap">
-                    <div class="content">
+                    <div class="content" style="border: none !important;background: none !important;">
                         <article class="post_item_single post_type_page post-2904 page type-page status-publish hentry">
                             <div class="post_content entry-content">
                                 <div data-elementor-type="wp-page" class="elementor elementor-2904">

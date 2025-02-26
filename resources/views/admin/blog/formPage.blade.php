@@ -64,7 +64,7 @@
                                         }
                                     }
                                 @endphp
-                                @if(!empty($c->seo)&&$c->seo->level>1)
+                                @if(!empty($c->seo))
                                     <option value="{{ $c->id }}" {{ $selected }}>{{ $c->seo->title }}</option>
                                 @endif
                             @endforeach

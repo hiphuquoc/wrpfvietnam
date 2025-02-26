@@ -35,8 +35,8 @@ $bg-04          : #dee2e6;
 $bg-03          : #e9ecef;
 $bg-02          : #EDF2F7;
 /* ===== không sửa trực tiếp ở đây do dùng replace */
-$colorLv1       : #00FA9A;
-$colorLv2       : #00E38C;
+$colorLv1       : #d72323;
+$colorLv2       : #c71919;
 // $colorLv2       : #00bd7d;
 
 /* ===== */
@@ -52,8 +52,8 @@ $colorTextLight : #ffd100;
 // $colorTitle     : #ffffffCC;
 $colorTitle     : #c6d8fd;
 /* ===== */
-$colorText      : #c0d0f1;
-$colorIcon      : #5a7dc2;
+$colorText      : #f1ede1;
+$colorIcon      : #c2bb5a;
 /* ===== */
 $colorLabel     : #ad8e70;
 /* ===== */
@@ -62,9 +62,9 @@ $colorStar      : #ffd100;
 $colorSuccess   : #00bd7d;
 $colorRed       : #FF6500;
 
-$colorBackgroundLv1: #1a202c;
-$colorBackgroundLv2: #2d3848;
-$colorBackgroundLv3: #3a4556;
+$colorBackgroundLv1: #16120f;
+$colorBackgroundLv2: #dad3be;
+$colorBackgroundLv3: #c2b99f;
 
 /* font chữ */
 /* @font-face {
@@ -146,8 +146,8 @@ $colorBackgroundLv3: #3a4556;
   font-display: swap;
   src: url('/fonts/svn-gilroy_semibold.ttf');
 }
-$fontTitle: "SVN-Gilroy Bold", sans-serif;
-$fontText: "SVN-Gilroy", sans-serif;
+$fontTitle: "Alatsi", sans-serif;
+$fontText: "Dosis", sans-serif;;
 /* mixin title */
 @mixin titleDefault {
   color: $colorText;
@@ -602,7 +602,7 @@ $heightMenu : 3.3rem;
   }
   &::-webkit-scrollbar-track {
     border-radius: 0.5rem;
-    background: $colorBackgroundLv3;
+    background: $colorBackgroundLv2;
   }
 }
 

@@ -42,21 +42,15 @@
 @endpush
 @section('content')
 
-    <div class="articleBox distanceBetweenBox">
-        <div class="pagePageBox distanceBetweenSubbox">
-            <!-- breadcrumb -->
-            @include('wallpaper.template.breadcrumb')
-            <!-- tiêu đề -->
-            <h1 class="titlePage">{{ $itemSeo->title ?? $item->seo->title ?? null }}</h1>
-            <!-- Nội dung -->
-            @if(!empty($itemSeo->contents))
-                @php
-                    $xhtmlContent = '';
-                    foreach($itemSeo->contents as $content) $xhtmlContent .= $content->content;
-                @endphp
-                <div class="contentBox">{!! $xhtmlContent !!}</div>
-            @endif
-        </div>
+    <div class="pagePageBox">
+        <!-- breadcrumb -->
+        @include('wallpaper.template.breadcrumb')
+        <!-- tiêu đề -->
+        <h1 class="titlePage">{{ $itemSeo->title ?? $item->seo->title ?? null }}</h1>
+        <!-- Nội dung -->
+        @if(!empty($htmlContent))
+            <div id="js_buildTocContentMain_element" class="contentBox">{!! $htmlContent !!}</div>
+        @endif
     </div>
 @endsection
 @push('modal')
@@ -64,7 +58,7 @@
 @endpush
 @push('bottom')
     <!-- Header bottom -->
-    @include('wallpaper.snippets.headerBottom')
+    {{-- @include('wallpaper.snippets.headerBottom') --}}
     <!-- === START:: Zalo Ring === -->
     {{-- @include('main.snippets.zaloRing') --}}
     <!-- === END:: Zalo Ring === -->

@@ -1,15 +1,16 @@
 .tocContentMain {
     border-radius: 0.5rem;
     position: relative;
-    background: $colorBackgroundLv2;
+    background: rgba($colorBackgroundLv2, 1);
     &_title {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
         font-family: $fontTitle;
         cursor: pointer;
-        border-bottom: 1px solid $colorBackgroundLv1;
-        color: $colorText;
+        // border-bottom: 1px solid rgba($colorLv2, 0.35);
+        // color: $colorText;
         display: flex;
         gap: 1rem;
+        background: $colorBackgroundLv3;
         &_icon {
             &::before {
                 @include fontAwesome;
@@ -18,17 +19,17 @@
         }
     }
     &_list {
-        padding: 0.25rem 1rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.68;
         max-height: 500px;
         &_item {
             display: flex;
-            padding-top: 0.25rem;
+            padding-top: 0.75rem;
             color: $colorText;
             &:not(:first-child){
-                margin-top: 0.5rem;
-                border-top: 1px dashed $colorBackgroundLv1;
+                margin-top: 0.75rem;
+                border-top: 1px dashed $colorBackgroundLv3;
             }
         }
         &.customScrollBar-y {
@@ -70,11 +71,11 @@
         display: none;
         position: fixed;
         height: 100%;
-        max-width: 20rem;
-        min-width: 17rem; /* là chiều ngang của headerSide */
+        max-width: 350px;
+        min-width: 350px;
         z-index: 101;
         top: 128px;
-        box-shadow: 2px -2px 7px $colorBackgroundLv1;
+        box-shadow: 2px -2px 7px rgba($colorBackgroundLv1, 0.35);
         left: 0;
         &:dir(rtl), [dir="rtl"] & {
             left: unset;
@@ -111,8 +112,8 @@
 .tocFixedIcon {
     display: none;
     position: fixed;
-    width: 32px;
-    aspect-ratio: 1/1;
+    width: 38px;
+    height: 38px;
     background: $colorBackgroundLv2;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -139,7 +140,7 @@
             content: "\f0ca";
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            font-size: 1.2rem;
+            font-size: 1.35rem;
         }
     }
     @media(max-width: 767px){

@@ -63,7 +63,7 @@
 <script id="rs-initialisation-scripts">
 	var	tpj = jQuery;
 	
-	var	revapi8,revapi9;
+	var	revapi8, revapi9;
 	
 	if(window.RS_MODULES === undefined) window.RS_MODULES = {};
 	if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
@@ -112,23 +112,6 @@
 							v_offset:50
 						}
 					},
-					// arrows: {
-					// 	enable:true,
-					// 	style:"custom",
-					// 	tmp:'<i class="fa-solid fa-arrow-left-long"></i>',
-					// 	left: {
-					// 		v_align:"bottom",
-					// 		h_offset:65,
-					// 		v_offset:50
-					// 	},
-					// 	right: {
-					// 		h_align:"left",
-					// 		v_align:"bottom",
-					// 		h_offset:120,
-					// 		v_offset:50,
-					// 		tmp:'<i class="fa-solid fa-arrow-right-long"></i>'
-					// 	}
-					// },
 				},
 				viewPort: {
 					global:true,
@@ -177,26 +160,19 @@
 					wheelCallDelay:1000,
 					arrows: {
 						enable:true,
-						style:"hesperiden",
+						style:"custom",
 						left: {
-							h_offset:30
+							v_align:"bottom",
+							h_offset:65,
+							v_offset:50
 						},
 						right: {
-							h_offset:30
+							h_align:"left",
+							v_align:"bottom",
+							h_offset:120,
+							v_offset:50
 						}
 					},
-					// arrows: {
-					// 	enable:true,
-					// 	style:"custom",
-					// 	tmp:'<i class="fa-solid fa-arrow-left-long"></i>',
-					// 	left: {
-					// 		h_offset:30
-					// 	},
-					// 	right: {
-					// 		h_offset:30,
-					// 		tmp:'<i class="fa-solid fa-arrow-right-long"></i>'
-					// 	}
-					// },
 					tabs: {
 						enable:true,
 						tmp:"<div class=\"tp-tab-content\">  <span class=\"tp-tab-date\">param1</span>  <span class=\"tp-tab-title\">title</span></div><div class=\"tp-tab-image\"></div>",

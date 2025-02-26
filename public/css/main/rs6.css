@@ -340,7 +340,10 @@ rs-module rs-mask-wrap *:last-child,
 rs-layer:not(.rs-wtbindex),
 .rs-layer:not(.rs-wtbindex),
 rs-alyer *:not(.rs-wtbindex),
-.rs-layer *:not(.rs-wtbindex) { outline: none !important; }
+.rs-layer *:not(.rs-wtbindex) { 
+	font-size: 60px;
+	outline: none !important; 
+}
 
 
 /* CAROUSEL FUNCTIONS */

@@ -27,9 +27,9 @@
     @include('wallpaper.schema.creativeworkseries', compact('item'))
     <!-- END:: Article Schema -->
     
-    <!-- STRAT:: FAQ Schema -->
+    {{-- <!-- STRAT:: FAQ Schema -->
     @include('wallpaper.schema.itemlist', ['data' => $categories])
-    <!-- END:: FAQ Schema -->
+    <!-- END:: FAQ Schema --> --}}
 
     <!-- STRAT:: Title - Description - Social -->
     @include('wallpaper.schema.social', ['item' => $item, 'lowPrice' => 1, 'highPrice' => 5])

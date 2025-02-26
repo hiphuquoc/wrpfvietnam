@@ -20,7 +20,7 @@
             </div>
             <div class="elementor-element elementor-element-fb2b381 sc_fly_static elementor-widget elementor-widget-shortcode animated slideInUp" data-id="fb2b381" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;}" data-widget_type="shortcode.default">
                <div class="elementor-widget-container">
-                  <div class="elementor-shortcode">
+                  {{-- <div class="elementor-shortcode">
                      <div class="woocommerce columns-4 ">
                         <ul class="products columns-4">
                            <li class="product type-product post-311 status-publish first instock product_cat-boxing-gloves product_cat-boxing-gloves-kids-kids product_cat-boxing-gloves-women product_tag-boxing product_tag-items product_tag-sport product_tag-store has-post-thumbnail shipping-taxable purchasable product-type-variable">
@@ -373,16 +373,49 @@
                            </li>
                         </ul>
                      </div>
+                  </div> --}}
+
+                  <!-- danh sách sản phẩm -->
+                  <div class="elementor-shortcode">
+                     <div class="productGridBox">
+
+                        @for($i=0;$i<11;++$i)
+                           <div class="productGridBox_item">
+                              <div class="productGridBox_item_image">
+                                 <img src="https://rumble.ancorathemes.com/wp-content/uploads/2018/05/product-1-copyright-400x286.jpg" alt="" title="" loading="lazy" />
+                              </div>
+                              <div class="productGridBox_item_content">
+
+                                 <a href="#" class="productGridBox_item_content_title">
+                                    <h3>Excellence Pro-Style Boxing Gloves</h3>
+                                 </a>
+
+                                 <div class="productGridBox_item_content_price">
+                                    250,000 Đ – 550,000 Đ
+                                 </div>
+
+                              </div>
+                              
+                           </div>
+                        @endfor
+
+                     </div>
                   </div>
+
                </div>
             </div>
-            <div class="elementor-element elementor-element-1a0c56e sc_fly_static elementor-widget elementor-widget-spacer" data-id="1a0c56e" data-element_type="widget" data-widget_type="spacer.default">
+
+
+            
+
+
+            {{-- <div class="elementor-element elementor-element-1a0c56e sc_fly_static elementor-widget elementor-widget-spacer" data-id="1a0c56e" data-element_type="widget" data-widget_type="spacer.default">
                <div class="elementor-widget-container">
                   <div class="elementor-spacer">
                      <div class="elementor-spacer-inner"></div>
                   </div>
                </div>
-            </div>
+            </div> --}}
             <div class="elementor-element elementor-element-75a3608 sc_fly_static elementor-widget elementor-widget-trx_sc_button" data-id="75a3608" data-element_type="widget" data-widget_type="trx_sc_button.default">
                <div class="elementor-widget-container">
                   <div id="trx_sc_button_162523968" class="sc_item_button sc_button_wrap sc_align_center">

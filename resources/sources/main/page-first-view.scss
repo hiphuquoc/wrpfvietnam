@@ -1,22 +1,47 @@
 /* Home ===== màn hình đầu tiên */
 @import 'childs/default.scss';
 @import 'childs/base.scss';
-@import 'childs/header-top.scss';
-@import 'childs/header-side.scss';
 @import 'childs/breadcrumb.scss';
+@import 'childs/menu.scss';
+@import 'childs/toccontent.scss';
 /* Home ===== kém quan trọng (nhưng ít nên đưa vào đây luôn) */
-@import 'childs/image-box.scss';
 @import 'childs/footer.scss';
 @import 'childs/right.scss';
-@import 'childs/login.scss';
-@import 'childs/modal.scss';
 
 .pagePageBox {
     width: 100%;
-    max-width: 70rem;
+    max-width: 85rem;
+    margin: 110px auto 100px auto;
     display: flex;
     flex-direction: column;
     align-self: center;
+}
+
+.aboutUsBox {
+    display: flex;
+    align-items: stretch;
+    gap: 2.5rem;
+    &:not(:last-child){
+        margin-bottom: 80px;
+    }
+    margin: 15px 0;
+    &_image {
+        width: 55%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &_boxContent {
+        width: 45%;
+        &_title {
+            h2 {
+                margin-bottom: 2rem;
+                font-size: 2.5rem;
+            }
+        }
+    }
 }
 
 // .pageContentWithSidebar {

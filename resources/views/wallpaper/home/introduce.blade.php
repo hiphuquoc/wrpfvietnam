@@ -4,7 +4,7 @@
          <div class="elementor-widget-wrap elementor-element-populated">
             <div class="elementor-element elementor-element-4500234 sc_fly_static elementor-widget elementor-widget-image" data-id="4500234" data-element_type="widget" data-widget_type="image.default">
                <div class="elementor-widget-container">
-                  <img decoding="async" src="https://rumble.ancorathemes.com/wp-content/uploads/elementor/thumbs/shutterstock_1345454252-copyright-qvl04uy57dqryp397422fw329a3jtkkmtp7u0ummoc.jpg" title="shutterstock_1345454252-copyright" alt="" loading="lazy" />													
+                  <img decoding="async" src="https://wrpfvietnam.storage.googleapis.com/storage/images/469951924-18431102386079996-3588802101494871374-n.webp" title="shutterstock_1345454252-copyright" alt="" loading="lazy" />													
                </div>
             </div>
          </div>
@@ -24,7 +24,7 @@
                      class="sc_title sc_title_default">
                      <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default">Hướng dẫn</span>
                      <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                        <span class="sc_item_title_text">Đăng ký và<br/>Luật của giải đấu</span>
+                        <span class="sc_item_title_text">Quy định chung<br/>và Luật thi đấu</span>
                      </h1>
                   </div>
                   <!-- /.sc_title -->		
@@ -57,11 +57,11 @@
                         <div class="elementor-element elementor-element-73dd6f7 video_icon sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_iconed_text" data-id="73dd6f7" data-element_type="widget" data-widget_type="trx_sc_layouts_iconed_text.default">
                            <div class="elementor-widget-container">
                               <div id="trx_sc_layouts_iconed_text_1538260628" class="sc_layouts_iconed_text iconed_text_extra">
-                                 <a href="#14" class="sc_layouts_item_link sc_layouts_iconed_text_link">
+                                 <a href="/tai-lieu-world-raw-powerlifting-federation-vietnam" class="sc_layouts_item_link sc_layouts_iconed_text_link">
                                     <span class="sc_layouts_item_icon sc_layouts_iconed_text_icon icon-china-glith sc_icon_type_icons">
-                                       <i class="fa-solid fa-play"></i>
+                                       <i class="fa-regular fa-file-lines"></i>
                                     </span>
-                                    <span class="sc_layouts_item_details sc_layouts_iconed_text_details"><span class="sc_layouts_item_details_line1 sc_layouts_iconed_text_line1">Video</span><span class="sc_layouts_item_details_line2 sc_layouts_iconed_text_line2"> Hướng dẫn</span></span><!-- /.sc_layouts_iconed_text_details -->
+                                    <span class="sc_layouts_item_details sc_layouts_iconed_text_details"><span class="sc_layouts_item_details_line1 sc_layouts_iconed_text_line1">Tài liệu</span><span class="sc_layouts_item_details_line2 sc_layouts_iconed_text_line2"> hướng dẫn chi tiết</span></span><!-- /.sc_layouts_iconed_text_details -->
                                  </a>
                               </div>
                               <!-- /.sc_layouts_iconed_text -->		

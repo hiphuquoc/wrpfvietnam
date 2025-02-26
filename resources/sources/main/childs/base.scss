@@ -117,6 +117,9 @@ h5, h6 {
 
 .titlePage {
   margin-bottom: 0.5rem;
+  margin-top: 0 !important;
+  margin-bottom: 1.75rem;
+  font-size: 3rem;
   // @media(max-width: 767px){
   //   margin-bottom: -0.25rem;
   // }
@@ -340,7 +343,7 @@ blockquote{
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 110rem;
+  max-width: 1308px;
   padding: 0 calc(1.5rem - 3px) 0 1.5rem; /* trừ cho scrollbar */
   @media(max-width: 1199px){
     padding: 0 calc(1.25rem - 2.5px) 0 1.25rem;

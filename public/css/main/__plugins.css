@@ -24,8 +24,9 @@
     padding: 38px;
   }
   .post_item.post_layout_excerpt .post_title {
-    font-size: 48px;
-    line-height: 45px;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.5px;
   }
   .post_layout_excerpt .post_featured {
     display: inline-block;
@@ -51,7 +52,7 @@
     margin: 0;
   }
   .post_layout_excerpt .post_meta {
-    margin-bottom: 0.9rem;
+    margin-bottom: 1.5rem;
   }
   .post_layout_excerpt .post_header + .post_content {
     margin-top: 1.5rem;
@@ -2320,7 +2321,7 @@
   }
   .sc_title.sc_title_default .sc_item_title {
     font-size: 4rem;
-    line-height: 4.8rem;
+    line-height: 5.2rem;
     font-weight: bold;
     letter-spacing: 0.5px;
   }
@@ -2379,7 +2380,7 @@
   .sc_blogger_item_list.sc_blogger_item_image_position_alter
     .sc_blogger_item_title {
     font-size: 2.2rem;
-    line-height: 2.5rem;
+    line-height: 3.2rem;
     letter-spacing: 0.5px;
     font-weight: 500;
   }
@@ -2409,7 +2410,7 @@
   }
   .post_meta .post_date {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .sc_blogger.sc_blogger_default
     .sc_blogger_item_content
@@ -2567,7 +2568,7 @@
     .sc_blogger_item_content
     .sc_blogger_item_title {
     font-size: 2.2rem;
-    line-height: 2.5rem;
+    line-height: 3.2rem;
     letter-spacing: 0.5px;
     font-weight: 500;
   }
@@ -2601,7 +2602,8 @@
     .sc_blogger_item_body {
     -webkit-box-align: start;
     -ms-flex-align: start;
-    align-items: flex-start;
+    align-items: stretch;
+    display: flex;
   }
   .sc_blogger_item_default_classic_2 .sc_item_featured .post_info_bl {
     top: 14px;
@@ -2854,7 +2856,10 @@
     vertical-align: top;
   }
   .sc_layouts_item_icon + .sc_layouts_item_details {
-    margin-left: 1.4em;
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
   .ua_ie_11 .sc_layouts_column_icons_position_right .sc_layouts_item_details {
     float: left;
@@ -2867,6 +2872,7 @@
     vertical-align: top;
   }
   .iconed_text_extra .sc_layouts_item_icon {
+    font-size: 1.5rem;
     width: 76px;
     height: 76px;
     line-height: 76px;
@@ -9507,8 +9513,9 @@
     text-align: center;
   }
   .newsletter {
-    font-size: 24px;
-    padding-top: 21px;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-weight: 500;
   }
   .check_form .inited {
     vertical-align: middle;
