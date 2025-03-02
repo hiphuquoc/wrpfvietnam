@@ -10,7 +10,7 @@
                   <div class="sc_layouts_item elementor-element elementor-element-7dd0013 sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="7dd0013" data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                      <div class="elementor-widget-container">
                         <a href="/" id="trx_sc_layouts_logo_73909349" class="sc_layouts_logo sc_layouts_logo_default trx_addons_inline_200934247">
-                           <img loading="lazy" class="logo_image" src="https://wrpfvietnam.storage.googleapis.com/storage/images/logo-wrpfvietnam.webp" alt="Rumble" style="margin:0 auto;max-width:100px;max-height:100px;">
+                           <img loading="lazy" class="logo_image" src="https://wrpfvietnam.storage.googleapis.com/storage/images/logo-wrpfvietnam.webp?version=1.2" alt="Rumble" style="margin:0 auto;max-width:100px;max-height:100px;">
                         </a>
                      </div>
                   </div>

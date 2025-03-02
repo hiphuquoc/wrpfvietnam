@@ -13,13 +13,22 @@
         align-items: stretch;
         width: calc(25% - 1.5rem);
         box-shadow: 1px 4px 12px #e4ddca;
+        &:hover {
+            .productGridBox_item_image {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
         &_image {
             width: 100%;
             aspect-ratio: 1/1;
+            overflow: hidden;
             img {
                 width: 100%;
                 height: 100% !important;
                 object-fit: cover;
+                transition: transform 0.5s ease;
             }
         }
         &_content {
