@@ -19,8 +19,10 @@
         foreach($item->prices as $price){
             foreach($price->wallpapers as $w){
                 if($i!=0) $image .= ', ';
-                $image  .= '"'.\App\Helpers\Image::getUrlImageCloud($w->infoWallpaper->file_cloud_wallpaper).'"';
-                ++$i;
+                if(!empty($w->infoWallpaper->file_cloud_wallpaper)){
+                    $image  .= '"'.\App\Helpers\Image::getUrlImageCloud($w->infoWallpaper->file_cloud_wallpaper).'"';
+                    ++$i;
+                }
             }
         }
     }

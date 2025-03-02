@@ -42,60 +42,80 @@
 </div>
 @push('scriptCustom')
     <script type="text/javascript">
-        /* submit form */
-        function submitFormLogin(idForm){
-            const error     = validateFormLogin(idForm);
-            if(error.length==0){
-                /* tải loading */ 
-                // loadLoading(idForm);
-                /* lấy dữ liệu truyền đi */
-                var data    = $('#'+idForm).serializeArray();
-                $.ajax({
-                    url         : '{{ route("admin.loginAdmin") }}',
-                    type        : 'post',
-                    dataType    : 'json',
-                    data        : {
-                        '_token'    : '{{ csrf_token() }}',
-                        data        : data
-                    },
-                    success     : function(response){
-                        if(response.flag==true){
-                            window.location.href = "{{ route('admin.product.list') }}";
-                        }else {
-                            $('#js_noticeLogin').html(response.message).css('display', 'block');
+
+        function submitFormLogin(idForm) {
+            const error = validateFormLogin(idForm);
+            if (error.length === 0) {
+                // lấy dữ liệu form
+                const formElement = document.getElementById(idForm);
+                const formData = new FormData(formElement);
+
+                // Chuyển FormData thành dạng object để gửi đi
+                let dataObject = {};
+                formData.forEach((value, key) => {
+                    if (!dataObject[key]) {
+                        dataObject[key] = value;
+                    } else {
+                        // Trường hợp input có mảng (name[])
+                        if (!Array.isArray(dataObject[key])) {
+                            dataObject[key] = [dataObject[key]];
                         }
+                        dataObject[key].push(value);
                     }
                 });
-            }else {
-                $.each(error, function(index, value){
-                    const input = $('#'+idForm).find('[name='+value.name+']');
-                    input.attr('placeholder', value.notice).css('border', '1px solid red');
+
+                // Gửi fetch request
+                fetch('{{ route("admin.loginAdmin") }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}' // Thêm CSRF token vào header
+                    },
+                    body: JSON.stringify({
+                        data: dataObject
+                    })
+                })
+                .then(response => response.json())
+                .then(response => {
+                    if (response.flag === true) {
+                        window.location.href = "{{ route('admin.product.list') }}";
+                    } else {
+                        const noticeElement = document.getElementById('js_noticeLogin');
+                        noticeElement.innerHTML = response.message;
+                        noticeElement.style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                });
+            } else {
+                error.forEach(function(item) {
+                    const input = document.querySelector(`#${idForm} [name="${item.name}"]`);
+                    if (input) {
+                        input.setAttribute('placeholder', item.notice);
+                        input.style.border = '1px solid red';
+                    }
                 });
             }
         }
-        /* validate form */
-        function validateFormLogin(idForm){
-            let error       = [];
-            /* input required không được bỏ trống */
-            $('#'+idForm).find('input[required]').each(function(){
-                /* đưa vào mảng */
-                if($(this).val()==''){
-                    const errorItem = [];
-                    errorItem['name']       = $(this).attr('name');
-                    errorItem['notice']     = 'Không được để trống trường này';
-                    error.push(errorItem);
+
+        function validateFormLogin(idForm) {
+            let error = [];
+            const form = document.getElementById(idForm);
+            const inputs = form.querySelectorAll('input[required]');
+
+            inputs.forEach(function(input) {
+                if (input.value.trim() === '') {
+                    error.push({
+                        name: input.name,
+                        notice: 'Không được để trống trường này'
+                    });
                 }
             });
-            /* validate số điện thoại => bắt đầu bằng số 0 và 10 số */
-            // var phone       = $('#phone').val();
-            // var phoneRegex  = /^0\d{9}$/;
-            // if (!phoneRegex.test(phone)) {
-            //     const errorItem         = [];
-            //     errorItem['name']       = 'phone';
-            //     errorItem['notice']     = 'Điện thoại không hợp lệ';
-            //     error.push(errorItem);
-            // }
+
             return error;
         }
+
+
     </script>
 @endpush

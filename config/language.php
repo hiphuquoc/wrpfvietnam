@@ -742,7 +742,7 @@ return [
         "name_by_language" => "Tiếng Việt",
         "area" => "Việt Nam",
         "scope" => "Ngôn ngữ khu vực châu Á",
-        "currency" => "VND",
+        "currency" => "Đ",
         "currency_code" => "đ",
         "money_value" => "25000",
         "decimal_places" => 0,

@@ -52,7 +52,7 @@ $colorTextLight : #ffd100;
 // $colorTitle     : #ffffffCC;
 $colorTitle     : #c6d8fd;
 /* ===== */
-$colorText      : #f1ede1;
+$colorText      : #5b5853;
 $colorIcon      : #c2bb5a;
 /* ===== */
 $colorLabel     : #ad8e70;
@@ -378,7 +378,7 @@ $heightMenu : 3.3rem;
 @mixin backgroundModal {
   display: none;
   position: fixed;
-  top: $heightMenu;
+  top: calc($heightMenu + 2rem);
   left: 0;
   width: 100%;
   height: 100%;

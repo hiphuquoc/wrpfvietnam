@@ -4,6 +4,7 @@
 @import 'childs/breadcrumb.scss';
 @import 'childs/menu.scss';
 @import 'childs/toccontent.scss';
+@import 'childs/header-top.scss';
 /* Home ===== kém quan trọng (nhưng ít nên đưa vào đây luôn) */
 @import 'childs/footer.scss';
 @import 'childs/right.scss';
@@ -24,7 +25,7 @@
     &:not(:last-child){
         margin-bottom: 80px;
     }
-    margin: 15px 0;
+    margin: 0 15px 0 0;
     &_image {
         width: 55%;
         img {

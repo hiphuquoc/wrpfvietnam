@@ -46,7 +46,6 @@
 
     @if(!empty($blogs)&&$blogs->isNotEmpty())
         <div class="posts_container">
-
             @foreach($blogs as $blog)
                 @if(!empty($blog->seos[0]->infoSeo))
                     @php
@@ -89,8 +88,9 @@
                     </article>
                 @endif
             @endforeach
-
         </div>
+    @else 
+        <div>Hiện không có bài viết nào trong danh mục này!</div>
     @endif
 
     <!-- button load more -->

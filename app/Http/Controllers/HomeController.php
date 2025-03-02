@@ -12,7 +12,7 @@ use App\Http\Controllers\Admin\HelperController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TranslateController;
 use App\Models\Blog;
-use App\Models\Tag;
+use App\Models\Category;
 use App\Models\Seo;
 use App\Models\SeoContent;
 use App\Models\Product;
@@ -71,10 +71,17 @@ class HomeController extends Controller {
                     }
                 }
             }
+            /* lấy thông tin cho menu */
             $categoriesBlog = CategoryBlog::select('*')
                                 ->where('flag_show', 1)
                                 ->get();
-            /* blogs */
+            $categoriesLv2  = Category::select('*')
+                                ->whereHas('seos.infoSeo', function($query) use($language){
+                                    $query->where('level', 2)
+                                                ->where('language', $language);
+                                })
+                                ->get();
+            /* giải đấu */
             $events         = Blog::select('*')
                                 ->whereHas('categories.infoCategory.seos.infoSeo', function($query){
                                     $query->where('slug', 'giai-dau');
@@ -92,7 +99,17 @@ class HomeController extends Controller {
                                 ->skip(0)
                                 ->take(3)
                                 ->get();
-            $xhtml          = view('wallpaper.home.index', compact('item', 'itemSeo', 'language', 'categoriesBlog', 'blogs', 'events'))->render();
+            /* sản phẩm mẫu */
+            $products       = Product::select('*')
+                                ->whereHas('seos.infoSeo', function($query) use($language){
+                                    $query->where('language', $language);
+                                })
+                                ->orderBy('id', 'DESC')
+                                ->with('seo', 'seos', 'prices')
+                                ->skip(0)
+                                ->take('8')
+                                ->get();
+            $xhtml          = view('wallpaper.home.index', compact('item', 'itemSeo', 'language', 'categoriesBlog', 'categoriesLv2', 'blogs', 'events', 'products'))->render();
             /* Ghi dữ liệu - Xuất kết quả */
             if(env('APP_CACHE_HTML')==true) Storage::put(config('main_'.env('APP_NAME').'.cache.folderSave').$nameCache, $xhtml);
         }
@@ -101,32 +118,28 @@ class HomeController extends Controller {
 
     public static function test(Request $request){
         $products   = Category::select('*')
-                        ->whereHas('seo', function($query){
-                            $query->where('slug', '!=', 'hinh-nen-dien-thoai');
+                        ->whereHas('seos.infoSeo', function($query){
+                            $query->where('slug', 'giay-powerlifting');
                         })
                         ->get();
         $i          = 0;
         foreach($products as $product){
-            if($i!=0){
-                
+            // /* xóa ảnh đại diện trên google_clouds */ 
+            // if(!empty($product->seo->image)) Upload::deleteWallpaper($product->seo->image);
+            /* delete relation */
+            $product->products()->delete();
+            $product->freeWallpapers()->delete();
+            $product->files()->delete();
+            $product->tags()->delete();
+            /* delete các trang seos ngôn ngữ */
+            foreach($product->seos as $s){
                 // /* xóa ảnh đại diện trên google_clouds */ 
-                // if(!empty($product->seo->image)) Upload::deleteWallpaper($product->seo->image);
-                /* delete relation */
-                $product->products()->delete();
-                $product->freeWallpapers()->delete();
-                $product->files()->delete();
-                $product->tags()->delete();
-                /* delete các trang seos ngôn ngữ */
-                foreach($product->seos as $s){
-                    // /* xóa ảnh đại diện trên google_clouds */ 
-                    // if(!empty($s->infoSeo->image)) Upload::deleteWallpaper($s->infoSeo->image);
-                    if(!empty($s->infoSeo->contents)) foreach($s->infoSeo->contents as $c) $c->delete();
-                    $s->infoSeo()->delete();
-                    $s->delete();
-                }
-                $product->delete();
-
+                // if(!empty($s->infoSeo->image)) Upload::deleteWallpaper($s->infoSeo->image);
+                if(!empty($s->infoSeo->contents)) foreach($s->infoSeo->contents as $c) $c->delete();
+                $s->infoSeo()->delete();
+                $s->delete();
             }
+            $product->delete();
             ++$i;
         }
                     

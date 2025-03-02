@@ -118,8 +118,9 @@ h5, h6 {
 .titlePage {
   margin-bottom: 0.5rem;
   margin-top: 0 !important;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   font-size: 3rem;
+  line-height: 3.8rem;
   // @media(max-width: 767px){
   //   margin-bottom: -0.25rem;
   // }
@@ -155,36 +156,12 @@ form {
 .distanceBetweenBox {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  @media(max-width: 1199px){
-    gap: 1.25rem;
-  }
-  @media(max-width: 991px){
-    gap: 1rem;
-  }
-  @media(max-width: 767px){
-    gap: 0.75rem;
-  }
-  @media(max-width: 577px){
-    gap: 0.5rem;
-  }
+  gap: 4rem;
 }
 .distanceBetweenSubbox {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  // @media(max-width: 1199px){
-  //   gap: 0.625rem;
-  // }
-  @media(max-width: 991px){
-    gap: 0.325rem;
-  }
-  // @media(max-width: 767px){
-  //   gap: 0.325rem;
-  // }
-  @media(max-width: 577px){
-    gap: 0.25rem;
-  }
+  gap: 1rem;
 }
 .contentBox {
   text-align: justify;
@@ -376,7 +353,6 @@ blockquote{
   text-align: center;
   border-radius: 100px;
   letter-spacing: 0.5px;
-  // box-shadow: 0 2px 0 $colorBackgroundLv3;
   box-shadow: 0 2px 0 $colorBackgroundLv3;
   transition: all 0.2s;
   &:focus, &:hover {
@@ -399,12 +375,15 @@ blockquote{
     }
   }
   &.secondary {
-    background: $colorBackgroundLv2;
+    background: linear-gradient(45deg, $colorLv1, $colorLv2) !important;
+    
     color: $colorText;
     // border: 1px solid $colorBackgroundLv3;
     &:hover {
-      background: $colorBackgroundLv2;
+      // background: $colorBackgroundLv2;
       box-shadow: none;
+      background: linear-gradient(120deg, $colorLv1, $colorLv2) !important;
+      transform: translateY(2px);
       // color: $colorTextLight;
     }
   }

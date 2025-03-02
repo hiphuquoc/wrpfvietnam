@@ -45,8 +45,8 @@ class LoginController extends Controller
         $flag       = false;
         $message    = 'Email và Password không hợp lệ!';
         $dataForm   = [];
-        foreach($request->get('data') as $value){
-            $dataForm[$value['name']] = $value['value'];
+        foreach($request->get('data') as $key => $value){
+            $dataForm[$key] = $value;
         }
         // Đăng nhập
         if(Auth::attempt($dataForm)){

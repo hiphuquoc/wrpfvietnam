@@ -60,33 +60,26 @@
 <!-- ===== END:: SCHEMA ===== -->
 @endpush
 @section('content')
-    <!-- share social -->
-    @include('wallpaper.template.shareSocial')
-    <!-- content -->
-    <div class="distanceBetweenBox articleBox maxContent-1200">
+    <div class="pageProduct">
+        <!-- content -->
+        <div class="articleBox maxContent-1200">
 
-        <!-- Gallery và Product detail -->
-        @include('wallpaper.product.body')
-        
-        <!-- Related -->
-        @if($total>0)
-            <div class="relatedProductBox">
-                <div class="relatedProductBox_title">
-                    <h2>{!! config('language.'.$language.'.data.suggestions_for_you') !!}</h2>
-                </div>
-                <div class="relatedProductBox_box">
-                    @include('wallpaper.template.wallpaperGridWithLoadMore', [
-                        'loaded'            => 0,
-                        'total'             => $total,
-                        'idProduct'         => $item->id,
-                    ])
-                </div>
+            <!-- breadcrumb -->
+            @include('wallpaper.template.breadcrumb')
+
+            <div class="distanceBetweenBox">
+                <!-- Gallery và Product detail -->
+                @include('wallpaper.product.body')
+                
+                <!-- related -->
+                @include('wallpaper.product.related')
             </div>
-        @endif
+            
+        </div>
     </div>
 @endsection
 @push('modal')
-    <!-- Message Add to Cart -->
+    {{-- <!-- Message Add to Cart -->
     <div id="js_addToCart_idWrite">
         @include('wallpaper.cart.cartMessage', [
             'title'     => $item->name,
@@ -100,7 +93,7 @@
 
     @include('wallpaper.modal.viewImageFull')
 
-    @include('wallpaper.modal.paymentMethod')
+    @include('wallpaper.modal.paymentMethod') --}}
 @endpush
 @push('bottom')
     <!-- === START:: Zalo Ring === -->
@@ -114,12 +107,13 @@
         });
 
         /* thay đổi option sản phẩm */
-        function loadProductPrice(idProduct){
+        function loadProductPrice(idProduct) {
             // Tạo URL với tham số truy vấn
             const url = new URL('{{ route("ajax.loadProductPrice") }}');
-            const language = $('#language').val();
+            const language = document.getElementById('language').value;
             url.searchParams.append('product_info_id', idProduct);
             url.searchParams.append('language', language);
+
             fetch(url, {
                 method: 'GET',
                 headers: {
@@ -128,30 +122,42 @@
             })
             .then(response => response.json())
             .then(data => {
-                if(data.content!='') $('#js_loadProductPrice').html(data.content);
-                if(data.price_all_mobile!='') $('#js_loadProductPrice_priceAllMobile').html(data.price_all_mobile);
+                if (data.content !== '') {
+                    document.getElementById('js_loadProductPrice').innerHTML = data.content;
+                }
+                if (data.price_all_mobile !== '') {
+                    document.getElementById('js_loadProductPrice_priceAllMobile').innerHTML = data.price_all_mobile;
+                }
             })
             .catch(error => {
                 console.error('Error fetching option product data:', error);
             });
         }
 
+
         /* thay đổi option sản phẩm */
-        function setOptionProduct(element, idProduct, type){
-            /* xử lý cho việc thay đổi button */
-            $(element).parent().children().each(function(){
-                $(this).removeClass('selected');
-            });
-            $(element).addClass('selected');
-            /* xử lý cho việc hiển thị lại giá theo option */
-            const idKey         = $(element).data('product_price_id');
-            const elementPrice  = $('#'+idKey);
-            elementPrice.parent().children().each(function(){
-                $(this).removeClass('selected');
-            });
-            elementPrice.addClass('selected');
-            /* set lại sự kiện button addToCart cho đúng option vừa chọn */
-            $('#js_addToCart_button').attr("onclick", "addToCart('"+idProduct+"', '"+idKey+"', '"+type+"');");
+        function setOptionProduct(element, idProduct, type) {
+            // Xóa class 'selected' của tất cả anh chị em trong cùng parent
+            const siblings = element.parentNode.children;
+            for (let i = 0; i < siblings.length; i++) {
+                siblings[i].classList.remove('selected');
+            }
+            element.classList.add('selected');
+
+            // Lấy id của option vừa chọn
+            const idKey = element.getAttribute('data-product_price_id');
+            const elementPrice = document.getElementById(idKey);
+
+            // Xóa class 'selected' của tất cả anh chị em trong cùng parent của giá
+            const priceSiblings = elementPrice.parentNode.children;
+            for (let i = 0; i < priceSiblings.length; i++) {
+                priceSiblings[i].classList.remove('selected');
+            }
+            elementPrice.classList.add('selected');
+
+            // Set lại sự kiện onclick cho nút Add to Cart
+            document.getElementById('js_addToCart_button').setAttribute("onclick", `addToCart('${idProduct}', '${idKey}', '${type}');`);
         }
+
     </script>
 @endpush

@@ -3,12 +3,13 @@
 return [
     'info'  => [
         'wrpfvietnam'  => [
-            'author_name'           => 'Name.com.vn',
-            'founder_name'          => 'Name.com.vn',
-            'founder_address'       => '55 Cô Giang, Rạch Giá',
-            'founding'              => '2023-03-30',
-            'company_name'          => 'Name.com.vn',
-            'email'                 => 'anhnendienthoai@gmail.com',
+            'author_name'           => 'Wrpfvietnam.com',
+            'founder_name'          => 'Wrpfvietnam.com',
+            'founder_address'       => '219 Lý Thường Kiệt, Phường 15, Quận 11, TP. Hồ Chí Minh',
+            'founding'              => '2025-03-03',
+            'company_name'          => 'Wrpfvietnam.com',
+            'email'                 => 'support@wrpfvietnam.com',
+            'hotline'               => '091 747 87 20',
             'company_description'   => 'Giới thiệu dịch vụ',
             'contacts'          =>  [
                                         [
@@ -25,63 +26,7 @@ return [
                                         ]
                                     ],
         ],
-        'topgirl'   => [
-            'author_name'           => 'topGirl.com.vn',
-            'founder_name'          => 'topGirl.com.vn',
-            'founder_address'       => 'Viet Nam',
-            'founding'              => '2024-05-30',
-            'company_name'          => 'topGirl.com.vn',
-            'email'                 => 'topgirl.com.vn@gmail.com',
-            'company_description'   => 'Giới thiệu dịch vụ',
-            'contacts'          =>  [
-                                        [
-                                            'type'      => 'customer service',
-                                            'phone'     => '0869112676'
-                                        ],
-                                        [
-                                            'type'      => 'technical support',
-                                            'phone'     => '0869112676'
-                                        ],
-                                        [
-                                            'type'      => 'sales',
-                                            'phone'     => '0869112676'
-                                        ]
-                                    ],
-        ],
-        'topanime'  => [
-            'author_name'           => 'topAnime.com.vn',
-            'founder_name'          => 'topAnime.com.vn',
-            'founder_address'       => 'Viet Nam',
-            'founding'              => '2024-07-30',
-            'company_name'          => 'topAnime.com.vn',
-            'email'                 => 'topanime.com.vn@gmail.com',
-            'company_description'   => 'Giới thiệu dịch vụ',
-            'contacts'          =>  [
-                                        [
-                                            'type'      => 'customer service',
-                                            'phone'     => '0889999553'
-                                        ],
-                                        [
-                                            'type'      => 'technical support',
-                                            'phone'     => '0889999553'
-                                        ],
-                                        [
-                                            'type'      => 'sales',
-                                            'phone'     => '0889999553'
-                                        ]
-                                    ],
-        ]
     ],
-    // 'author_name'           => 'Name.com.vn',
-    // 'founder_name'          => 'Name.com.vn',
-    // 'founder_address'       => '55 Cô Giang, Rạch Giá',
-    // 'founding'              => '2023-03-30',
-    // 'company_name'          => 'Name.com.vn',
-    // 'hotline'               => '0968.6171.68',
-    // 'email'                 => 'anhnendienthoai@gmail.com',
-    // 'address'               => '55 Cô Giang, Rạch Giá',
-    // 'company_description'   => 'Giới thiệu dịch vụ',
-    // 'logo_750x460'          => 'public/images/upload/trang-diem-750.webp',
     'logo_main'             => 'images/upload/logo-type-manager-upload.webp',
     'products'          => [
         [

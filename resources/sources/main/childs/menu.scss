@@ -515,14 +515,14 @@ $width_normalMenu : 250px;
                     display: block;
                 }
                 a, div {
-                    color: $colorText;
+                    color: $colorLv2;
                 }
             }
             
             > a, > div {
                 display: block;
                 padding: 10px 15px;
-                color: $colorText;
+                color: #f1ede1;
                 font-weight: 500;
                 i {
                     float: right;
