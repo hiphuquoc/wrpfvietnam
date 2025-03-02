@@ -106,7 +106,7 @@
                                     --><a
                                     id="slider-8-slide-18-layer-4" 
                                     class="rs-layer rev-slider-button rev-btn"
-                                    href="/biography" target="_self" rel="nofollow"
+                                    href="/cua-hang" target="_self" rel="nofollow"
                                     data-type="button"
                                     data-color="#f1ede1"
                                     data-xy="xo:325px,173px,131px,80px;y:m;yo:200px,271px,112px,112px;"
@@ -120,7 +120,7 @@
                                     data-frame_999="y:50;o:0;st:w;sp:1000;sR:9520;"
                                     data-frame_hover="c:#d72323;bgc:#f1ede1;bor:0px,0px,0px,0px;sp:200ms;"
                                     style="z-index:8;background-color:#d72323;font-family:'Alatsi';text-transform:uppercase;"
-                                    >Khám phá ngay!
+                                    >Mua sắm ngay!
                                  </a><!--
                                     -->
                                  <rs-layer
@@ -139,7 +139,7 @@
 
                               </rs-slide>
 
-                              <!-- slider 2 -->
+                              {{-- <!-- slider 2 -->
                               <rs-slide style="position: absolute;" data-key="rs-19" data-title="Slide" data-thumb="https://wrpfvietnam.storage.googleapis.com/storage/images/wrpfvietnam-slider-2-mini.webp" data-anim="adpr:false;f:nodelay;" data-in="x:(100%);m:true;col:5;" data-alttrans="slotslide-vertical">
                                  <img fetchpriority="high" decoding="async"
                                     src="//rumble.ancorathemes.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png"
@@ -265,11 +265,11 @@
                                     > 
                                  </rs-layer>	
 
-                              </rs-slide>
+                              </rs-slide> --}}
 
-                              {{-- <!-- slider 2 -->
-                              <rs-slide style="position: absolute;" data-key="rs-19" data-title="Slide" data-thumb="https://wrpfvietnam.storage.googleapis.com/storage/images/slider-karate-1-copyright-mini.webp" data-anim="adpr:false;f:nodelay;" data-in="x:(100%);m:true;col:5;" data-alttrans="slotslide-vertical">
-                                 <img decoding="async" src="//rumble.ancorathemes.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="slider home 2 of wrpfvietnam" title="slider-karate_2-copyright" width="1920" height="1000" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="https://wrpfvietnam.storage.googleapis.com/storage/images/slider-karate-1-copyright-large.webp" data-no-retina>
+                              <!-- slider 2 -->
+                              <rs-slide style="position: absolute;" data-key="rs-19" data-title="Slide" data-thumb="https://wrpfvietnam.storage.googleapis.com/storage/images/wrpfvietnam-slider-2-mini.webp" data-anim="adpr:false;f:nodelay;" data-in="x:(100%);m:true;col:5;" data-alttrans="slotslide-vertical">
+                                 <img decoding="async" src="//rumble.ancorathemes.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="slider home 2 of wrpfvietnam" title="slider-karate_2-copyright" width="1920" height="1000" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="https://wrpfvietnam.storage.googleapis.com/storage/images/wrpfvietnam-slider-2.webp" data-no-retina>
                                  <!--
                                     -->
                                  <rs-layer
@@ -277,8 +277,8 @@
                                     data-type="text"
                                     data-color="#d72323"
                                     data-rsp_ch="on"
-                                    data-xy="xo:328px,174px,132px,81px;y:m;yo:-229px,-122px,-92px,-56px;"
-                                    data-text="w:normal;s:36,19,14,8;l:78,41,31,19;"
+                                    data-xy="xo:328px,174px,132px,81px;y:m;yo:-190px,-122px,-92px,-56px;"
+                                    data-text="w:normal;s:50,19,14,8;l:78,41,31,19;"
                                     data-vbility="t,t,f,f"
                                     data-basealign="slide"
                                     data-layeronlimit="on"
@@ -288,7 +288,7 @@
                                     data-frame_999="y:100%;sX:0.7;sY:0.7;o:0;e:power2.in;st:w;sp:1000;sR:10950;"
                                     data-frame_999_mask="u:t;"
                                     style="z-index:12;font-family:'Arizonia';font-size:20px !important;"
-                                    >Famous 
+                                    >Wrpf Vietnam
                                  </rs-layer>
                                  <!--
                                     -->
@@ -297,7 +297,7 @@
                                     data-type="text"
                                     data-color="#f1ede1"
                                     data-rsp_ch="on"
-                                    data-xy="xo:320px,170px,129px,79px;y:m;yo:-140px,-74px,-56px,-34px;"
+                                    data-xy="xo:320px,170px,129px,79px;y:m;yo:-110px,-74px,-56px,-34px;"
                                     data-text="w:normal;s:122,65,49,30;l:122,65,49,30;fw:700;"
                                     data-basealign="slide"
                                     data-frame_0="o:1;"
@@ -308,7 +308,7 @@
                                     data-frame_1_mask="u:t;"
                                     data-frame_999="y:50,26,19,11;o:0;st:w;sp:1000;sR:10050;"
                                     style="z-index:11;font-family:'Alatsi';"
-                                    >KENDO 
+                                    >GHI DANH
                                  </rs-layer>
                                  <!--
                                     -->
@@ -317,7 +317,7 @@
                                     data-type="text"
                                     data-color="#f1ede1"
                                     data-rsp_ch="on"
-                                    data-xy="xo:320px,170px,129px,79px;y:m;yo:-28px,-14px,-10px,-6px;"
+                                    data-xy="xo:320px,170px,129px,79px;y:m;yo:-25px,-14px,-10px,-6px;"
                                     data-text="w:normal;s:122,65,49,30;l:122,65,49,30;fw:700;"
                                     data-basealign="slide"
                                     data-frame_0="o:1;"
@@ -328,7 +328,7 @@
                                     data-frame_1_mask="u:t;"
                                     data-frame_999="y:50,26,19,11;o:0;st:w;sp:1000;sR:9520;"
                                     style="z-index:10;font-family:'Alatsi';text-transform:uppercase;"
-                                    >FIGHTER Mark 
+                                    >THAM GIA
                                  </rs-layer>
                                  <!--
                                     -->
@@ -337,7 +337,7 @@
                                     data-type="text"
                                     data-color="#f1ede1"
                                     data-rsp_ch="on"
-                                    data-xy="xo:320px,170px,129px,79px;y:m;yo:86px,45px,34px,20px;"
+                                    data-xy="xo:320px,170px,129px,79px;y:m;yo:66px,45px,34px,20px;"
                                     data-text="w:normal;s:122,65,49,30;l:122,65,49,30;fw:700;"
                                     data-basealign="slide"
                                     data-frame_0="o:1;"
@@ -347,17 +347,17 @@
                                     data-frame_1_chars="e:power3.inOut;d:3;rZ:0deg;"
                                     data-frame_1_mask="u:t;"
                                     data-frame_999="y:50,26,19,11;o:0;st:w;sp:1000;sR:9520;"
-                                    style="z-index:9;font-family:'Alatsi';text-transform:uppercase;"
-                                    >Rumble 
+                                    style="z-index:9;font-family:'Alatsi';text-transform:uppercase;font-size:18px;"
+                                    >GIẢI ĐẤU SẮP TỚI 
                                  </rs-layer>
                                  <!--
                                     --><a
                                     id="slider-8-slide-19-layer-4" 
                                     class="rs-layer rev-slider-button rev-btn"
-                                    href="/biography" target="_self" rel="nofollow"
+                                    href="/" target="_self" rel="nofollow"
                                     data-type="button"
                                     data-color="#f1ede1"
-                                    data-xy="xo:325px,325px,132px,79px;y:m;yo:271px,271px,115px,109px;"
+                                    data-xy="xo:325px,173px,131px,80px;y:m;yo:200px,271px,112px,112px;"
                                     data-text="w:normal;s:18,16,15,14;l:18,16,15,14;fw:600;a:center;"
                                     data-dim="minh:0px,none,none,none;"
                                     data-basealign="slide"
@@ -368,7 +368,7 @@
                                     data-frame_999="y:50;o:0;st:w;sp:1000;sR:9520;"
                                     data-frame_hover="c:#d72323;bgc:#f1ede1;bor:0px,0px,0px,0px;sp:200ms;"
                                     style="z-index:8;background-color:#d72323;font-family:'Alatsi';text-transform:uppercase;"
-                                    >latest achievements 
+                                    >Đăng ký ngay!
                                  </a><!--
                                     -->
                                  <rs-layer
@@ -384,7 +384,7 @@
                                  </rs-layer>
                                  <!--
                                     -->					
-                              </rs-slide> --}}
+                              </rs-slide>
 
                             </rs-slides>
                          </rs-module>

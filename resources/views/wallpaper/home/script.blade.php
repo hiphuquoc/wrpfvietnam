@@ -133,30 +133,31 @@
 		window.revapi9 = jQuery(window.revapi9);
 		if(window.revapi9.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_9_2"); return;}
 		revapi9.revolutionInit({
-				revapi:"revapi8",
+				revapi:"revapi9",
+				sliderType:"carousel",
 				DPR:"dpr",
-				sliderLayout:"fullwidth",
-				duration:"13000ms",
+				duration:15000,
 				visibilityLevels:"1240,1024,778,480",
-				gridwidth:"1920,1024,778,480",
-				gridheight:"1000,550,430,430",
-				hideLayerAtLimit:769,
-				lazyType:"all",
-				spinner:"spinner0",
+				gridwidth:870,
+				gridheight:480,
+				lazyType:"smart",
+				spinner:"spinner2",
 				perspective:600,
 				perspectiveType:"local",
-				keepBPHeight:true,
-				editorheight:"1000,550,430,430",
+				editorheight:"480,768,960,720",
 				responsiveLevels:"1240,1024,778,480",
-				ajaxUrl:"",
+				stopAtSlide:1,
+				stopAfterLoops:0,
+				shuffle:true,
+				stopLoop:true,
+				carousel: {
+					infinity:true,
+					space:28
+				},
 				progressBar:{disableProgressBar:true},
 				navigation: {
+					mouseScrollNavigation:false,
 					wheelCallDelay:1000,
-					onHoverStop:false,
-					touch: {
-						touchenabled:true,
-						touchOnDesktop:true
-					},
 					arrows: {
 						enable:true,
 						style:"custom",
@@ -172,11 +173,30 @@
 							v_offset:50
 						}
 					},
+					tabs: {
+						enable:true,
+						tmp:"<div class=\"tp-tab-content\">  <span class=\"tp-tab-date\">param1</span>  <span class=\"tp-tab-title\">title</span></div><div class=\"tp-tab-image\"></div>",
+						style:"hesperiden",
+						hide_onmobile:true,
+						hide_under:"901px",
+						v_offset:0,
+						space:5,
+						width:300,
+						height:114,
+						min_width:0,
+						wrapper_padding:20,
+						wrapper_color:"rgb(241,237,225)",
+						visibleAmount:4,
+						span:true,
+						position:"outer-horizontal"
+					}
 				},
 				viewPort: {
 					global:true,
 					globalDist:"-200px",
-					enable:false
+					enable:true,
+					outof:"pause",
+					visible_area:"20%"
 				},
 				fallbacks: {
 					allowHTML5AutoPlayOnAndroid:true
