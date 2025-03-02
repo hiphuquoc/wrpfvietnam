@@ -524,7 +524,7 @@ h1.entry-title {
 }
 
 .elementor-2904 .elementor-element.elementor-element-a8f8d09 {
-	padding: 131px 0px 0px 0px;
+	padding: 100px 0px 0px 0px;
 }
 
 .elementor-2904 .elementor-element.elementor-element-c2c7803 {
@@ -556,7 +556,7 @@ h1.entry-title {
 
 .elementor-2904 .elementor-element.elementor-element-e47fc76 {
 	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-	padding: 150px 0px 0px 0px;
+	padding: 130px 0px 0px 0px;
 }
 
 .elementor-2904 .elementor-element.elementor-element-e47fc76>.elementor-background-overlay {
@@ -791,7 +791,7 @@ h1.entry-title {
 	}
 
 	.elementor-2904 .elementor-element.elementor-element-005ff96 {
-		padding: 150px 30px 30px 30px;
+		padding: 130px 30px 30px 30px;
 	}
 
 	.elementor-2904 .elementor-element.elementor-element-e47fc76 {
