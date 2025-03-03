@@ -167,7 +167,13 @@
                     padding: 0.75rem 1.5rem;
                     cursor: pointer;
                     font-family: $fontTitle;
-                    &.selected, &:hover {
+                    &.selected {
+                        background: $colorLv2;
+                        color: #f1ede1;
+                        text-shadow: 1px 1px 10px $colorBackgroundLv1;
+                    }
+                
+                    &:not(:first-child):hover {
                         background: $colorLv2;
                         color: #f1ede1;
                         text-shadow: 1px 1px 10px $colorBackgroundLv1;
