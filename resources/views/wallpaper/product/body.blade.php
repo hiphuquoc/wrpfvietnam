@@ -43,7 +43,7 @@
                         <div class="productDetailBox_detail_quantity_box">
                             <div class="productDetailBox_detail_quantity_box_minus"><i class="fa-solid fa-minus"></i></div>
                             <div class="productDetailBox_detail_quantity_box_number">
-                                <input type="number" name="quantity" value="1" min="1" max="999" />
+                                <input id="js_addToCart_quantity" type="number" name="quantity" value="1" min="1" max="999" />
                             </div>
                             <div class="productDetailBox_detail_quantity_box_plus"><i class="fa-solid fa-plus"></i></div>
                         </div>

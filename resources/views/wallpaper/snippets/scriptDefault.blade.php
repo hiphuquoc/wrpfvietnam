@@ -282,7 +282,6 @@
     /* xóa sản phẩm khỏi cart */
     function removeProductCart(idProduct, idProductPrice, idRow, idTotal, idCount) {
         loadLoading(idRow); // giả sử hàm này bạn đã viết sẵn
-
         const language = document.getElementById('language').value;
 
         const queryString = new URLSearchParams({

@@ -765,7 +765,7 @@ return [
             "cart"              => "Giỏ hàng",
             "your_cart_is_empty"    => "Giỏ hàng của bạn trống",
             "continue_shopping" => "Tiếp tục mua sắm",
-            "full_set"          => "Trọn bộ",
+            "full_set"          => "Trọn combo",
             "image"             => "Ảnh",
             "options"           => "Tùy chọn",
             "product_guide_after_payment"   => "<div>Sau khi thanh toán, Bạn sẽ nhận được ảnh gốc trực tiếp và qua mail để có thể tải xuống sử dụng.</div>",

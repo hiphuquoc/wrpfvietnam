@@ -112,13 +112,13 @@
                     </div>
                 </a>                
             </li>
-                @if(empty($item->type->code)||$item->type->code!='cart')
+            @if(empty($item->type->code)||$item->type->code!='cart')
                 <li>
                     <div id="js_viewSortCart_idWrite">
                         @include('wallpaper.cart.cartSort', ['products' => null])
                     </div>
                 </li>
-                @endif
+            @endif
             <li>
                 <div>
                     <i class="fa-solid fa-bars" style="font-size:1.4rem;margin-top:0.25rem;"></i>

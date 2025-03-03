@@ -77,9 +77,14 @@
             
         </div>
     </div>
+
+    <!-- Loading -->
+    <div class="loadingBox">
+        <span class="loadingIcon"></span>
+    </div>
 @endsection
 @push('modal')
-    {{-- <!-- Message Add to Cart -->
+    <!-- Message Add to Cart -->
     <div id="js_addToCart_idWrite">
         @include('wallpaper.cart.cartMessage', [
             'title'     => $item->name,
@@ -91,7 +96,7 @@
         ])
     </div>
 
-    @include('wallpaper.modal.viewImageFull')
+    {{-- @include('wallpaper.modal.viewImageFull')
 
     @include('wallpaper.modal.paymentMethod') --}}
 @endpush

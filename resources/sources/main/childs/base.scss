@@ -341,17 +341,16 @@ blockquote{
 }
 
 .button {
-  padding: 0.5rem 2rem;
+  padding: 0.75rem 1.5rem;
   background: linear-gradient(45deg, $colorButtonLv1, $colorButtonLv2);
   display: inline-block;
   font-family: $fontTitle;
   color: #fff;
-  border-radius: 100px;
   cursor: pointer;
   font-size: inherit;
   border: none;
   text-align: center;
-  border-radius: 100px;
+  border-radius: 0.5rem;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 0 $colorBackgroundLv3;
   transition: all 0.2s;
