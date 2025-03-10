@@ -24,7 +24,7 @@
             <strong>Dường dẫn tĩnh:</strong> {{ $item->seo->slug_full }}
         </div>
         <div class="oneLine">
-            <strong>Giá trọn bộ:</strong> <span style="color:red;font-weight:bold;font-size:1.3rem;">{{ $item->price }}</span>
+            <strong>Giá trọn combo:</strong> <span style="color:red;font-weight:bold;font-size:1.3rem;">{{ $item->price }}</span>
         </div>
         
         @if(!empty($item->categories)&&$item->categories->isNotEmpty())
