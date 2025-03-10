@@ -1,0 +1,24 @@
+/* Home ===== màn hình đầu tiên */
+@import 'childs/default.scss';
+@import 'childs/base.scss';
+@import 'childs/breadcrumb.scss';
+@import 'childs/menu.scss';
+@import 'childs/toccontent.scss';
+@import 'childs/header-top.scss';
+/* Home ===== kém quan trọng (nhưng ít nên đưa vào đây luôn) */
+@import 'childs/footer.scss';
+@import 'childs/right.scss';
+@import 'childs/modal.scss';
+@import 'childs/loading.scss';
+
+.infoAthleteBox {
+    &_info {
+        display: flex;
+        &_image {
+            flex: 0 0 200px;
+        }
+        &_box {
+            width: 100%;
+        }
+    }
+}

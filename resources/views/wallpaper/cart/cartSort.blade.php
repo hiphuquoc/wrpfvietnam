@@ -32,8 +32,6 @@
                             </div>
                         @endforeach
                     @endif
-
-
                 @endforeach
             </div>
             <div class="cartBox_list_item buttonBox">

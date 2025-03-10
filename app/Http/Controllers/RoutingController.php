@@ -13,7 +13,7 @@ use App\Models\Blog;
 use App\Models\Category;
 // use App\Models\Tag;
 // use App\Models\Style;
-use App\Models\Customer;
+use App\Models\Trainer;
 use App\Models\Page;
 use App\Models\CategoryBlog;
 use App\Models\Product;
@@ -196,12 +196,18 @@ class RoutingController extends Controller{
                                                         ->where('language', $language);
                                         })
                                         ->get();
-                    /* xây dựng toc_content */
-                    $htmlContent        = '';
-                    foreach($itemSeo->contents as $content) $htmlContent .= $content->content;
-                    $dataContent        = CategoryMoneyController::buildTocContentMain($htmlContent, $language);
-                    $htmlContent        = str_replace('<div id="tocContentMain"></div>', '<div id="tocContentMain">'.$dataContent['toc_content'].'</div>', $dataContent['content']);
-                    $xhtml  = view('wallpaper.page.index', compact('item', 'itemSeo', 'categoriesBlog', 'categoriesLv2', 'htmlContent', 'language', 'breadcrumb'))->render();               
+                    if($item->type->code=='ranking'){ /* trang xếp hạng */
+                        
+                        $xhtml  = view('wallpaper.ranking.index', compact('item', 'itemSeo', 'categoriesBlog', 'categoriesLv2', 'language', 'breadcrumb'))->render(); 
+                    }else { /* trang bình thường */
+                        /* xây dựng toc_content */
+                        $htmlContent        = '';
+                        foreach($itemSeo->contents as $content) $htmlContent .= $content->content;
+                        $dataContent        = CategoryMoneyController::buildTocContentMain($htmlContent, $language);
+                        $htmlContent        = str_replace('<div id="tocContentMain"></div>', '<div id="tocContentMain">'.$dataContent['toc_content'].'</div>', $dataContent['content']);
+                        $xhtml  = view('wallpaper.page.index', compact('item', 'itemSeo', 'categoriesBlog', 'categoriesLv2', 'htmlContent', 'language', 'breadcrumb'))->render();    
+                    }
+                                   
                 }
                 /* ===== Category Blog ==== */
                 if($itemSeo->type=='category_blog'){
@@ -288,6 +294,18 @@ class RoutingController extends Controller{
                     $dataContent        = CategoryMoneyController::buildTocContentMain($htmlContent, $language);
                     $htmlContent        = str_replace('<div id="tocContentMain"></div>', '<div id="tocContentMain">'.$dataContent['toc_content'].'</div>', $dataContent['content']);
                     $xhtml              = view('wallpaper.blog.index', compact('item', 'itemSeo', 'categoriesBlog', 'categoriesLv2', 'blogFeatured', 'blogRelated', 'language', 'breadcrumb', 'htmlContent'))->render();
+                }
+                 /* ===== Trainer ==== */
+                 if($itemSeo->type=='trainer_info'){
+                    $flagMatch          = true;
+                    /* thông tin trang */
+                    $item               = Trainer::select('*')
+                                            ->whereHas('seos.infoSeo', function($query) use($idSeo){
+                                                $query->where('id', $idSeo);
+                                            })
+                                            ->with('seo', 'seos.infoSeo.contents')
+                                            ->first();
+                    $xhtml              = view('wallpaper.teacherDetail.index', compact('item', 'itemSeo', 'language', 'breadcrumb'))->render();
                 }
                 /* Ghi dữ liệu - Xuất kết quả */
                 if($flagMatch==true){

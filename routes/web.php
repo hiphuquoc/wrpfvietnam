@@ -44,6 +44,7 @@ use App\Http\Controllers\Admin\ApiAIController;
 use App\Http\Controllers\Admin\ChatGptController;
 use App\Http\Controllers\Admin\HelperController;
 use App\Http\Controllers\Admin\TranslateController;
+use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\CheckOnpageController;
 
 use App\Http\Controllers\Auth\ProviderController;
@@ -60,19 +61,19 @@ use App\Http\Controllers\GoogledriveController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/he-thong', [LoginController::class, 'loginForm'])->name('admin.loginForm');
-/* login */
-Route::post('/loginAdmin', [LoginController::class, 'loginAdmin'])->name('admin.loginAdmin');
-Route::post('/loginCustomer', [LoginController::class, 'loginCustomer'])->name('admin.loginCustomer');
-Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
-Route::get('/createUser', [LoginController::class, 'create'])->name('admin.createUser');
-/* login với google */
-Route::get('/setCsrfFirstTime', [CookieController::class, 'setCsrfFirstTime'])->name('main.setCsrfFirstTime');
-Route::post('/auth/google/callback', [ProviderController::class, 'googleCallback'])->name('main.google.callback');
-/* Url IPN (bên thứ 3) => để VNPay gọi qua check (1 lần nữa) xem đơn hàng xác nhận chưa => trong trường hợp mạng khách hàng có vấn đề */
-Route::post('/vnpay/url_ipn', [VNPayController::class, 'handleIPN'])->name('main.vnpay.ipn');
+
+Route::middleware(['auth', 'role:admin,sub-admin'])->group(function () {
+    Route::prefix('trainer')->group(function(){
+        Route::get('/', [TrainerController::class, 'list'])->name('admin.trainer.list');
+        Route::get('/view', [TrainerController::class, 'view'])->name('admin.trainer.view');
+        Route::post('/createAndUpdate', [TrainerController::class, 'createAndUpdate'])->name('admin.trainer.createAndUpdate');
+    });
+});
 
 Route::middleware(['auth', 'role:admin'])->prefix('he-thong')->group(function () {
+    /* ===== Trainer ===== */
+    Route::get('/delete', [TrainerController::class, 'delete'])->name('admin.trainer.delete');
+    Route::get('/createUser', [TrainerController::class, 'createUser'])->name('admin.trainer.createUser');
     /* ===== AI ===== */
     Route::get('/chatGpt', [ChatGptController::class, 'chatGpt'])->name('main.chatGpt');
     /* ===== REDIRECT ===== */
@@ -252,6 +253,18 @@ Route::middleware(['auth', 'role:admin'])->prefix('he-thong')->group(function ()
         Route::post('/createJobTranslateAndCreatePageAjax', [TranslateController::class, 'createJobTranslateAndCreatePageAjax'])->name('admin.translate.createJobTranslateAndCreatePageAjax');
     });
 });
+
+Route::get('/he-thong', [LoginController::class, 'loginForm'])->name('admin.loginForm');
+/* login */
+Route::post('/loginAdmin', [LoginController::class, 'loginAdmin'])->name('admin.loginAdmin');
+Route::post('/loginCustomer', [LoginController::class, 'loginCustomer'])->name('admin.loginCustomer');
+Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
+Route::get('/createUser', [LoginController::class, 'create'])->name('admin.createUser');
+/* login với google */
+Route::get('/setCsrfFirstTime', [CookieController::class, 'setCsrfFirstTime'])->name('main.setCsrfFirstTime');
+Route::post('/auth/google/callback', [ProviderController::class, 'googleCallback'])->name('main.google.callback');
+/* Url IPN (bên thứ 3) => để VNPay gọi qua check (1 lần nữa) xem đơn hàng xác nhận chưa => trong trường hợp mạng khách hàng có vấn đề */
+Route::post('/vnpay/url_ipn', [VNPayController::class, 'handleIPN'])->name('main.vnpay.ipn');
 
 /* my account */
 Route::middleware('auth')->group(function (){

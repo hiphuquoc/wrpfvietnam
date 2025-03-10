@@ -2,12 +2,21 @@
 return [
     'left-menu-admin'   => [
         [
+            'name'      => 'Huấn luyện viên',
+            'route'     => 'admin.trainer.list',
+            'icon'      => '<i class="fa-solid fa-user-tie"></i>',
+            'role'      => [
+                'admin', 
+                'sub-admin',
+            ],
+        ],
+        [
             'name'      => 'Đơn hàng',
-            'route'     => 'admin.order.list',
+            'route'     => '',
             'icon'      => '<i class="fa-regular fa-file-lines"></i>'
         ],
         [
-            'name'  => 'Chủ đề',
+            'name'  => 'Danh mục',
             'route' => '',
             'icon'  => '<i class="fa-solid fa-layer-group"></i>',
             'child'     => [
@@ -41,17 +50,17 @@ return [
             ]
         ],
         [
-            'name'      => 'Nền trả phí',
+            'name'      => 'Sản phẩm',
             'route'     => '',
             'icon'      => '<i class="fa-solid fa-cloud"></i>',
             'child'     => [
                 [
-                    'name'  => '1. Kho trả phí',
+                    'name'  => '1. Kho ảnh',
                     'route' => 'admin.wallpaper.list',
                     'icon'  => '<i data-feather=\'circle\'></i>',
                 ],
                 [
-                    'name'  => '2. Sản phẩm',
+                    'name'  => '2. Danh sách',
                     'route' => 'admin.product.list',
                     'icon'  => '<i data-feather=\'circle\'></i>'
                 ],
@@ -62,28 +71,28 @@ return [
                 ],
             ]
         ],
-        [
-            'name'      => 'Nền miễn phí',
-            'route'     => '',
-            'icon'      => '<i class="fa-solid fa-cloud-arrow-down"></i>',
-            'child'     => [
-                [
-                    'name'  => '1. Kho miễn phí',
-                    'route' => 'admin.freeWallpaper.list',
-                    'icon'  => '<i data-feather=\'circle\'></i>'
-                ],
-                [
-                    'name'  => '2. Seo từng ảnh',
-                    'route' => 'admin.seoFreeWallpaper.list',
-                    'icon'  => '<i data-feather=\'circle\'></i>'
-                ],
-                [
-                    'name'  => '3. Ngôn ngữ',
-                    'route' => '',
-                    'icon'  => '<i data-feather=\'circle\'></i>'
-                ],
-            ]
-        ],
+        // [
+        //     'name'      => 'Nền miễn phí',
+        //     'route'     => '',
+        //     'icon'      => '<i class="fa-solid fa-cloud-arrow-down"></i>',
+        //     'child'     => [
+        //         [
+        //             'name'  => '1. Kho miễn phí',
+        //             'route' => 'admin.freeWallpaper.list',
+        //             'icon'  => '<i data-feather=\'circle\'></i>'
+        //         ],
+        //         [
+        //             'name'  => '2. Seo từng ảnh',
+        //             'route' => 'admin.seoFreeWallpaper.list',
+        //             'icon'  => '<i data-feather=\'circle\'></i>'
+        //         ],
+        //         [
+        //             'name'  => '3. Ngôn ngữ',
+        //             'route' => '',
+        //             'icon'  => '<i data-feather=\'circle\'></i>'
+        //         ],
+        //     ]
+        // ],
         [
             'name'      => 'Trang',
             'route'     => 'admin.page.list',
@@ -119,23 +128,23 @@ return [
             'route'     => 'admin.image.list',
             'icon'      => '<i class="fa-regular fa-images"></i>',
         ],
-        [
-            'name'      => 'Cài đặt',
-            'route'     => '',
-            'icon'      => '<i class="fa-solid fa-gear"></i>',
-            'child'     => [
-                [
-                    'name'  => '1. Giao diện',
-                    'route' => 'admin.theme.list',
-                    'icon'  => '<i data-feather=\'circle\'></i>'
-                ],
-                [
-                    'name'  => '2. Slider home',
-                    'route' => 'admin.setting.slider',
-                    'icon'  => '<i data-feather=\'circle\'></i>'
-                ]
-            ]
-        ],
+        // [
+        //     'name'      => 'Cài đặt',
+        //     'route'     => '',
+        //     'icon'      => '<i class="fa-solid fa-gear"></i>',
+        //     'child'     => [
+        //         [
+        //             'name'  => '1. Giao diện',
+        //             'route' => 'admin.theme.list',
+        //             'icon'  => '<i data-feather=\'circle\'></i>'
+        //         ],
+        //         [
+        //             'name'  => '2. Slider home',
+        //             'route' => 'admin.setting.slider',
+        //             'icon'  => '<i data-feather=\'circle\'></i>'
+        //         ]
+        //     ]
+        // ],
         [
             'name'      => 'Công cụ SEO',
             'route'     => '',

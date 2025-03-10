@@ -176,7 +176,7 @@
                 @endforeach
             </select>
         </div> --}}
-        <div class="formBox_full_item">
+        {{-- <div class="formBox_full_item">
             <span data-toggle="tooltip" data-placement="top" title="
                 Đây là đánh dấu trang gốc của trang này, thẻ link canonical của trang này sẽ được khai báo là đường dẫn của trang gốc để Google biết đây là trang copy của trang gốc
             ">
@@ -206,7 +206,7 @@
                     @endif
                 @endforeach
             </select>
-        </div>
+        </div> --}}
         
         {{-- <!-- One Row -->
         <div class="formBox_full_item">

@@ -45,7 +45,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/page-first-view.scss": {
-    "file": "assets/page-first-view-7c8ea151.css",
+    "file": "assets/page-first-view-090a712a.css",
     "isEntry": true,
     "src": "resources/sources/main/page-first-view.scss"
   },
@@ -60,6 +60,16 @@
     "src": "resources/sources/main/product-first-view.scss"
   },
   "resources/sources/main/product-non-first-view.scss": {
+    "file": "assets/home-non-first-view-1a84b608.css",
+    "isEntry": true,
+    "src": "resources/sources/main/category-blog-non-first-view.scss"
+  },
+  "resources/sources/main/trainer-first-view.scss": {
+    "file": "assets/trainer-first-view-a987f31e.css",
+    "isEntry": true,
+    "src": "resources/sources/main/trainer-first-view.scss"
+  },
+  "resources/sources/main/trainer-non-first-view.scss": {
     "file": "assets/home-non-first-view-1a84b608.css",
     "isEntry": true,
     "src": "resources/sources/main/category-blog-non-first-view.scss"

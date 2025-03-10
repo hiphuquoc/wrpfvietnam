@@ -106,11 +106,9 @@
                 </a>
             </li>
             <li>
-                <a href="/tai-lieu-world-raw-powerlifting-federation-vietnam" title="Trang tin tức wrpfvietnam">
-                    <div>
-                        Tài liệu
-                    </div>
-                </a>                
+                <a href="/bang-xep-hang" title="Liên hệWrpfVietnam">
+                    <div>Xếp hạng</div>
+                </a>      
             </li>
             @if(empty($item->type->code)||$item->type->code!='cart')
                 <li>
@@ -126,7 +124,15 @@
                 <div class="normalMenu" style="margin-right:1.5rem;right:0;">
                     <ul>
                         <li>
-                            <a href="/lien-he-hitour" title="Liên hệ Hitour">
+                            
+                            <a href="/tai-lieu-world-raw-powerlifting-federation-vietnam" title="Trang tin tức wrpfvietnam">
+                                <div>
+                                    Tài liệu
+                                </div>
+                            </a>    
+                        </li>
+                        <li>
+                            <a href="/lien-he" title="Liên hệWrpfVietnam">
                                 <div>Liên hệ</div>
                             </a>
                         </li>

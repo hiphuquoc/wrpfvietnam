@@ -47,27 +47,87 @@
     }
 }
 
-// .pageContentWithSidebar {
-//     display: flex;
-//     align-items: flex-start;
-//     justify-content: center;
-//     &_content {
-//         width: calc(100% - 280px - 2.5rem);
-//         ul {
-//             margin-left: 1.25rem;
-//         }
-//     }
-//     &_sidebar {
-//         flex: 0 0 280px;
-//         margin-left: 2.5rem;
-//     }
-//     @media(max-width: 1199px){
-//         flex-wrap: wrap;
-//         &_content {
-//             width: 100%;
-//         }
-//         &_sidebar {
-//             margin-left: 0;
-//         }
-//     }
-// }
+.filterRanking {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    &_item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            content: '\f078';
+            @include fontAwesome;
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: $colorLv2;
+            pointer-events: none;
+        }
+        select {
+            visibility: visible !important;
+            outline: none;
+            border: 1px solid $colorBackgroundLv3;
+            background: $colorBackgroundLv2;
+            padding: 0.5rem 1.5rem 0.5rem 1rem;
+            font-size: 1.15rem;
+            color: $colorText;
+            font-weight: 500;
+            &::-webkit-scrollbar {
+                background-color: transparent;
+                // background: $colorBackgroundLv3;
+                width: 5px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $colorBackgroundLv3;
+                border-radius: 1000px;
+                // -webkit-box-shadow: inset 0 0 6px $bg-03;
+            }
+            &::-webkit-scrollbar-track {
+                // -webkit-box-shadow: inset 0 0 6px $bg-03;
+                border-radius: 0.75rem;
+                background: transparent;
+            }
+        }
+    }
+}
+
+.tableRanking {
+    font-size: 1.1rem;
+    border: 1px solid $colorBackgroundLv3;
+    tr {
+        &:nth-child(2n + 2){
+            background: $colorBackgroundLv2;
+        }
+        th {
+            font-weight: 500 !important;
+            font-size: 1.1rem;
+        }
+        th, td {
+            padding: 1rem 1.5rem;
+            text-transform: none;
+            &.nameLifter, &.event, &.squad, &.bench, &.deadlift {
+                font-weight: bold;
+            }
+            &.squad {
+                color: $colorLv2 !important;
+            }
+            &.bench {
+                color: #0084b8 !important;
+            }
+            &.deadlift {
+                color: #5010aa !important;
+            }
+            
+        }
+    }
+}
