@@ -114,14 +114,14 @@
                                 @foreach ($lifter as $value)
                                     @php
                                         $class = '';
-                                        if($loop->index==1) $class = 'nameLifter';
+                                        if($loop->index==2) $class = 'nameLifter';
                                         if($loop->index==7) $class = 'squad';
                                         if($loop->index==8) $class = 'bench';
                                         if($loop->index==9) $class = 'deadlift';
                                     @endphp
                                     <td class="{{ $class }}">
-                                        @if($loop->index==1)
-                                            <a href="#">{{ $value }}</a>
+                                        @if($loop->index==2)
+                                            <a href="/bang-xep-hang/2023-wrpf-the-american-pro-2">{{ $value }}</a>
                                         @else 
                                             {{ $value }}
                                         @endif
