@@ -87,35 +87,37 @@
                 </div>
             @endforeach --}}
             @foreach(config('main_'.env('APP_NAME').'.category_type') as $categoryType)
-                <div class="formBox_full_item">
-                    <label class="form-label">{{ $categoryType['name'] }}</label>
-                    <div class="{{ !empty($flagCopySource)&&$flagCopySource==true ? 'boxInputSuccess' : '' }}">
-                        <select class="select2 form-select select2-hidden-accessible" name="{{ $categoryType['key'] }}[]" multiple="true">
-                            <option value="">- Lựa chọn -</option>
-                            @if(!empty($categories))
-                                @foreach($categories as $category)
-                                    @if(!empty($category->seo->type) && $category->seo->type == $categoryType['key'])
-                                        @php
-                                            $selected = null;
-                                            $oldCategories = old($categoryType['key'], []);
-                                            if(in_array($category->id, $oldCategories)) {
-                                                $selected = 'selected';
-                                            } else if(!empty($item->categories)){
-                                                foreach($item->categories as $c) {
-                                                    if(!empty($c->infoCategory->id) && $c->infoCategory->id == $category->id) {
-                                                        $selected = 'selected';
-                                                        break;
+                @if($categoryType['key']=='category_info')
+                    <div class="formBox_full_item">
+                        <label class="form-label">{{ $categoryType['name'] }}</label>
+                        <div class="{{ !empty($flagCopySource)&&$flagCopySource==true ? 'boxInputSuccess' : '' }}">
+                            <select class="select2 form-select select2-hidden-accessible" name="{{ $categoryType['key'] }}[]" multiple="true">
+                                <option value="">- Lựa chọn -</option>
+                                @if(!empty($categories))
+                                    @foreach($categories as $category)
+                                        @if(!empty($category->seo->type) && $category->seo->type == $categoryType['key'])
+                                            @php
+                                                $selected = null;
+                                                $oldCategories = old($categoryType['key'], []);
+                                                if(in_array($category->id, $oldCategories)) {
+                                                    $selected = 'selected';
+                                                } else if(!empty($item->categories)){
+                                                    foreach($item->categories as $c) {
+                                                        if(!empty($c->infoCategory->id) && $c->infoCategory->id == $category->id) {
+                                                            $selected = 'selected';
+                                                            break;
+                                                        }
                                                     }
                                                 }
-                                            }
-                                        @endphp
-                                        <option value="{{ $category->id }}" {{ $selected }}>{{ $category->seo->title }}</option>
-                                    @endif
-                                @endforeach
-                            @endif
-                        </select>
+                                            @endphp
+                                            <option value="{{ $category->id }}" {{ $selected }}>{{ $category->seo->title }}</option>
+                                        @endif
+                                    @endforeach
+                                @endif
+                            </select>
+                        </div>
                     </div>
-                </div>
+                @endif
             @endforeach
             <!-- One row -->
             {{-- <div class="formBox_full_item">
@@ -188,7 +190,7 @@
             </div>            
             <!-- One Row -->
             <div class="formBox_full_item">
-                <label class="form-label inputRequired" for="price">Giá trọn bộ $</label>
+                <label class="form-label inputRequired" for="price">Giá trọn combo $</label>
                 <input type="text" class="form-control {{ !empty($flagCopySource)&&$flagCopySource==true ? 'inputSuccess' : '' }}" id="price" name="price" value="{{ old('price') ?? $item->price ?? null }}" required />
             </div>
         @endif
