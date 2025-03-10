@@ -109,7 +109,7 @@
                         @endphp
                         <td class="{{ $class }}">
                             @if($loop->index==1)
-                                <a href="#">{{ $value }}</a>
+                                <a href="/van-dong-vien/van-dong-vien-1">{{ $value }}</a>
                             @elseif($loop->index==3)
                                 <a href="/bang-xep-hang/2023-wrpf-the-american-pro-2">{{ $value }}</a>
                             @else 
@@ -169,7 +169,7 @@
                         @endphp
                         <td class="{{ $class }}">
                             @if($loop->index==1)
-                                <a href="#">{{ $value }}</a>
+                                <a href="/van-dong-vien/van-dong-vien-1">{{ $value }}</a>
                             @else 
                                 {{ $value }}
                             @endif

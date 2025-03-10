@@ -5,6 +5,7 @@
 @import 'childs/menu.scss';
 @import 'childs/toccontent.scss';
 @import 'childs/header-top.scss';
+@import 'childs/ranking.scss';
 /* Home ===== kém quan trọng (nhưng ít nên đưa vào đây luôn) */
 @import 'childs/footer.scss';
 @import 'childs/right.scss';
@@ -97,37 +98,6 @@
                 border-radius: 0.75rem;
                 background: transparent;
             }
-        }
-    }
-}
-
-.tableRanking {
-    font-size: 1.1rem;
-    border: 1px solid $colorBackgroundLv3;
-    tr {
-        &:nth-child(2n + 2){
-            background: $colorBackgroundLv2;
-        }
-        th {
-            font-weight: 500 !important;
-            font-size: 1.1rem;
-        }
-        th, td {
-            padding: 1rem 1.5rem;
-            text-transform: none;
-            &.nameLifter, &.event, &.squad, &.bench, &.deadlift {
-                font-weight: bold;
-            }
-            &.squad {
-                color: $colorLv2 !important;
-            }
-            &.bench {
-                color: #0084b8 !important;
-            }
-            &.deadlift {
-                color: #5010aa !important;
-            }
-            
         }
     }
 }

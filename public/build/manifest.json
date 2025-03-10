@@ -45,7 +45,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/page-first-view.scss": {
-    "file": "assets/page-first-view-090a712a.css",
+    "file": "assets/page-first-view-89256222.css",
     "isEntry": true,
     "src": "resources/sources/main/page-first-view.scss"
   },
@@ -65,7 +65,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/trainer-first-view.scss": {
-    "file": "assets/trainer-first-view-a987f31e.css",
+    "file": "assets/trainer-first-view-f273de7e.css",
     "isEntry": true,
     "src": "resources/sources/main/trainer-first-view.scss"
   },
