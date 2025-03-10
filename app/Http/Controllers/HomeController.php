@@ -31,6 +31,8 @@ use App\Mail\SendProductMail;
 
 use App\Services\BuildInsertUpdateModel;
 
+use Illuminate\Support\Facades\Hash;
+
 // use App\Models\RelationSeoTagInfo;
 // use App\Models\RelationSeoPageInfo;
 // use App\Models\Wallpaper;
@@ -117,34 +119,38 @@ class HomeController extends Controller {
     }
 
     public static function test(Request $request){
-        $products   = Category::select('*')
-                        ->whereHas('seos.infoSeo', function($query){
-                            $query->where('slug', 'giay-powerlifting');
-                        })
-                        ->get();
-        $i          = 0;
-        foreach($products as $product){
-            // /* xóa ảnh đại diện trên google_clouds */ 
-            // if(!empty($product->seo->image)) Upload::deleteWallpaper($product->seo->image);
-            /* delete relation */
-            $product->products()->delete();
-            $product->freeWallpapers()->delete();
-            $product->files()->delete();
-            $product->tags()->delete();
-            /* delete các trang seos ngôn ngữ */
-            foreach($product->seos as $s){
-                // /* xóa ảnh đại diện trên google_clouds */ 
-                // if(!empty($s->infoSeo->image)) Upload::deleteWallpaper($s->infoSeo->image);
-                if(!empty($s->infoSeo->contents)) foreach($s->infoSeo->contents as $c) $c->delete();
-                $s->infoSeo()->delete();
-                $s->delete();
-            }
-            $product->delete();
-            ++$i;
-        }
+        // $products   = Category::select('*')
+        //                 ->whereHas('seos.infoSeo', function($query){
+        //                     $query->where('slug', 'giay-powerlifting');
+        //                 })
+        //                 ->get();
+        // $i          = 0;
+        // foreach($products as $product){
+        //     // /* xóa ảnh đại diện trên google_clouds */ 
+        //     // if(!empty($product->seo->image)) Upload::deleteWallpaper($product->seo->image);
+        //     /* delete relation */
+        //     $product->products()->delete();
+        //     $product->freeWallpapers()->delete();
+        //     $product->files()->delete();
+        //     $product->tags()->delete();
+        //     /* delete các trang seos ngôn ngữ */
+        //     foreach($product->seos as $s){
+        //         // /* xóa ảnh đại diện trên google_clouds */ 
+        //         // if(!empty($s->infoSeo->image)) Upload::deleteWallpaper($s->infoSeo->image);
+        //         if(!empty($s->infoSeo->contents)) foreach($s->infoSeo->contents as $c) $c->delete();
+        //         $s->infoSeo()->delete();
+        //         $s->delete();
+        //     }
+        //     $product->delete();
+        //     ++$i;
+        // }
                     
 
-        dd(123);
+        // dd(123);
+
+        $password = Hash::make('wrpfvietnamCOM@mk123');
+
+        dd($password);
         
     }
 

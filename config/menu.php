@@ -2,7 +2,7 @@
 return [
     'left-menu-admin'   => [
         [
-            'name'      => 'Huấn luyện viên',
+            'name'      => 'Vận động viên',
             'route'     => 'admin.trainer.list',
             'icon'      => '<i class="fa-solid fa-user-tie"></i>',
             'role'      => [
