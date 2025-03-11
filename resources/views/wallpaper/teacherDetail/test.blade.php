@@ -15,7 +15,7 @@
                         <div>Nam</div>
                     </div>
                     <div class="infoAthleteBox_info_box_detail_box_item">
-                        <div><i class="fa-solid fa-star"></i> Năm sinh:</div>
+                        <div><i class="fa-solid fa-cake-candles"></i> Năm sinh:</div>
                         <div>1998</div>
                     </div>
                     <div class="infoAthleteBox_info_box_detail_box_item">
@@ -23,7 +23,7 @@
                         <div>0927621636 - vandongvien1@gmail.com</div>
                     </div>
                     <div class="infoAthleteBox_info_box_detail_box_item">
-                        <div><i class="fa fa-phone" aria-hidden="true"></i> Bắt đầu tập Pwl:</div>
+                        <div><i class="fa-solid fa-calendar-days"></i> Bắt đầu tập Pwl:</div>
                         <div>11/2010</div>
                     </div>
                     <div class="infoAthleteBox_info_box_detail_box_item">
