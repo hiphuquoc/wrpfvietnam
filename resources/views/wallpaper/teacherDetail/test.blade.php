@@ -37,12 +37,12 @@
                 </div>
             </div>
 
-            <div class="infoAthleteBox_info_box_introduce">
-                {{-- <h2>Giới thiệu</h2> --}}
+            {{-- <div class="infoAthleteBox_info_box_introduce">
+                <h2>Giới thiệu</h2>
                 <p>Nguyễn Văn A là một huấn luyện viên cá nhân chuyên nghiệp, luôn đặt tâm huyết vào từng buổi tập với phương châm “Vui Vẻ - Hòa Đồng - Nhiệt Tình”. Anh không chỉ giúp học viên đạt được mục tiêu thể hình mà còn chú trọng cải thiện sức khỏe tổng thể, xây dựng nền tảng thể lực vững chắc. Với kinh nghiệm nhiều năm trong ngành thể hình, anh đã đồng hành cùng nhiều khách hàng, từ những người mới bắt đầu đến các vận động viên chuyên nghiệp, giúp họ nâng cao sức mạnh, tăng cường sức bền và phát triển lối sống lành mạnh.</p>
 
                 <p>Không chỉ dừng lại ở việc hướng dẫn tập luyện, Nguyễn Văn A còn tận tâm trong việc tư vấn chế độ dinh dưỡng, điều chỉnh thói quen sinh hoạt để đảm bảo học viên đạt được kết quả tối ưu và duy trì phong độ lâu dài. Bằng phương pháp huấn luyện khoa học, kết hợp giữa kỹ thuật chuyên môn và sự thấu hiểu cá nhân, anh đã giúp nhiều học viên thay đổi cơ thể một cách bền vững, cải thiện các vấn đề sức khỏe như đau lưng, thừa cân hay suy giảm thể lực. Chính sự tận tâm và cách tiếp cận toàn diện đã giúp anh trở thành một người thầy, một người bạn đồng hành đáng tin cậy trên hành trình chinh phục sức khỏe và vóc dáng lý tưởng của mỗi học viên.</p>
-            </div>
+            </div> --}}
 
             <div class="infoAthleteBox_info_box_best">
                 <h2>Kỷ lục</h2>
