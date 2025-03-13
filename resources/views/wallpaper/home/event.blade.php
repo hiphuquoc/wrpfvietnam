@@ -27,13 +27,25 @@
                      <div class="sc_blogger_columns_wrap sc_item_columns sc_item_posts_container trx_addons_columns_wrap columns_padding_bottom">
                         @foreach($events as $event)
                            @php
-                              $title   = $event->seos[0]->infoSeo->title ?? '';
-                              $url     = '/'.$event->seos[0]->infoSeo->slug_full;
+                              $title      = $event->seos[0]->infoSeo->title ?? '';
+                              $url        = '/'.$event->seos[0]->infoSeo->slug_full;
+
+                              // Dùng regex để tách tiêu đề và thời gian
+                              preg_match('/^(.*?)\s*\((\d{2}[-\/]\d{2}[-\/]\d{4})\s*-\s*(\d{2}[-\/]\d{2}[-\/]\d{4})\)$/', $title, $matches);
+
+                              $title      = !empty($matches[1]) ? trim($matches[1]) : $title;
+                              $timeEvent  = (!empty($matches[2]) && !empty($matches[3])) ? $matches[2] . ' - ' . $matches[3] : '';
+
+                              $htmlTimeEvent = '';
+                              if (!empty($timeEvent)) {
+                                 $htmlTimeEvent = '<span class="tribe-event-date-start">'.trim($matches[2]).'</span> - ';
+                                 $htmlTimeEvent .= '<span class="tribe-event-date-end">'.trim($matches[3]).'</span>';
+                              }
                            @endphp
                            <div class="trx_addons_column-1_3">
                               <div class="sc_blogger_item sc_blogger_item_default sc_blogger_item_default_over_bottom sc_blogger_item_odd sc_blogger_item_align_none post_format_standard sc_blogger_item_with_image sc_blogger_item_on_plate sc_blogger_item_image_position_top post-4548 tribe_events type-tribe_events status-publish has-post-thumbnail hentry tribe_events_cat-wrestling cat_wrestling" data-item-number="1">
                                  <div class="sc_blogger_item_body">
-                                    <div class="post_featured with_thumb hover_dots sc_item_featured sc_blogger_item_featured post_featured_bg" data-ratio="3:4" style="background-image:url('{{ \App\Helpers\Image::getUrlImageSmallByUrlImage($event->seo->image) }}');">
+                                    <div class="post_featured with_thumb hover_dots sc_item_featured sc_blogger_item_featured post_featured_bg" data-ratio="3:4" style="background-image:url('{{ \App\Helpers\Image::getUrlImageLargeByUrlImage($event->seo->image) }}');">
                                        <div class="mask"></div>
                                        <a href={{ $url }}  aria-hidden="true" class="icons">
                                           <span></span>
@@ -46,7 +58,8 @@
                                           </h5>
                                           <div class="post_meta sc_blogger_item_meta post_meta">
                                              <span class="post_meta_item post_date">
-                                                <span class="tribe-event-date-start">11:30am, 11/05/2025</span> - <span class="tribe-event-date-end">15/05/2025</span></span> 		
+                                                {!! $htmlTimeEvent !!}
+                                             </span> 		
                                           </div>
                                        </div>
                                     </div>
