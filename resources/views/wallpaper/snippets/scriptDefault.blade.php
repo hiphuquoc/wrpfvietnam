@@ -344,6 +344,23 @@
         }
     }
 
+    function showHideListMenuMobile(thisD) {
+        let elemtC = thisD.parentElement.querySelector('ul');
+        
+        if (elemtC) {
+            let isHidden = getComputedStyle(elemtC).display === 'none';
+            
+            elemtC.style.display = isHidden ? 'block' : 'none';
+            
+            let arrowIcon = thisD.querySelector('.nav-mobile_main__arrow');
+            if (arrowIcon) {
+                arrowIcon.innerHTML = isHidden 
+                    ? '<i class="fas fa-chevron-down"></i>' 
+                    : '<i class="fas fa-chevron-right"></i>';
+            }
+        }
+    }
+
     function submitFormRegistryEmail(idForm, event) {
         event.preventDefault();
 

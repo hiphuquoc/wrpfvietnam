@@ -13,23 +13,16 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TranslateController;
 use App\Models\Blog;
 use App\Models\Category;
-use App\Models\Seo;
-use App\Models\SeoContent;
 use App\Models\Product;
-use GeoIp2\Database\Reader;
-use Illuminate\Support\Facades\Session;
-use App\Models\RelationSeoProductInfo;
-use App\Models\RelationSeoCategoryInfo;
-use App\Models\RelationSeoTagInfo;
-use App\Models\RelationSeoPageInfo;
-use App\Models\Timezone;
-use App\Jobs\Tmp;
+
 use GuzzleHttp\Client;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendProductMail;
 
-use App\Services\BuildInsertUpdateModel;
+use App\Helpers\Charactor;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Maatwebsite\Excel\Facades\Excel;
 
 use Illuminate\Support\Facades\Hash;
 
@@ -190,6 +183,52 @@ class HomeController extends Controller {
 
         dd($result);
         
+    }
+
+    public static function qrcode(Request $request){
+        // Đường dẫn file trong thư mục storage
+        $filePath = Storage::path('public/danh-sach-vdv.xlsx'); // Thay "your-folder" bằng tên thư mục trong storage
+
+        // Đọc file Excel và chuyển thành mảng
+        $data = Excel::toArray([], $filePath);
+
+        // Giả sử dữ liệu nằm trong sheet đầu tiên
+        $sheet = $data[0];
+
+        // Bỏ qua dòng tiêu đề (nếu có) và chuyển thành mảng huấn luyện viên
+        $trainers = [];
+        foreach ($sheet as $index => $row) {
+            if ($index === 0) continue; // Bỏ qua tiêu đề
+            $brithDay   = $row[2] ?? '';
+            $tmp        = explode('/', $brithDay);
+            $brithDay   = end($tmp);
+            $slug       = Charactor::convertStrToUrl(strtolower($row[1]));
+            $trainers[] = [
+                'name'      => $row[1] ?? '',
+                'birth_day' => $brithDay, 
+                'phone'     => $row[3] ?? '',   
+                'email'     => $row[4] ?? '',
+                'link'      => env('APP_URL').'/van-dong-vien/'.$slug,
+            ];
+        }
+
+        for ($i = 0; $i < count($trainers); $i++) {
+            $qrLink = $trainers[$i]['link'];
+        
+            $qrCode = QrCode::encoding('UTF-8')
+                ->format('svg')
+                ->size(300)
+                ->margin(1)
+                ->backgroundColor(255, 255, 255)
+                ->style('round')
+                ->eye('circle')
+                ->generate($qrLink);
+        
+            $trainers[$i]['qrCode'] = "data:image/svg+xml;base64," . base64_encode($qrCode);
+        }
+
+        // Trả dữ liệu ra view
+        return view('wallpaper.qrcode.index', compact('trainers'));
     }
 
     private static function findUniqueElements($arr1, $arr2) {

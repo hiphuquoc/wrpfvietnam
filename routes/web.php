@@ -282,6 +282,7 @@ Route::get('/auth/facebook/callback', [ProviderController::class, 'facebookCallb
 Route::get('/downloadSource', [GoogledriveController::class, 'downloadSource'])->name('main.downloadSource');
 /* nháp */
 Route::get('/test123', [HomeController::class, 'test'])->name('main.test');
+Route::get('/qrcode', [HomeController::class, 'qrcode'])->name('main.qrcode');
 /* lỗi */
 Route::get('/error', [\App\Http\Controllers\ErrorController::class, 'handle'])->name('error.handle');
 Route::get('/addToCart', [CartController::class, 'addToCart'])->name('main.addToCart');

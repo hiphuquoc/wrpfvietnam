@@ -532,6 +532,18 @@ label {
     display: none !important;
   }
 }
+.show-1023 {
+  display: none !important;
+  @media(max-width: 1023px){
+    display: flex !important;
+  }
+}
+.hide-1023 {
+  display: flex !important;
+  @media(max-width: 1023px){
+    display: none !important;
+  }
+}
 .show-1199 {
   display: none !important;
   @media(max-width: 1199px){

@@ -51,6 +51,10 @@
     <!-- Modal -->
     @stack('modal')
 
+    <!-- START:: Menu Mobile -->
+    @include('wallpaper.snippets.menuMobile')
+    <!-- END:: Menu Mobile -->
+
     <!-- login form modal -->
     <div id="js_checkLoginAndSetShow_modal">
         <!-- tải ajaax checkLoginAndSetShow() -->
