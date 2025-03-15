@@ -34,15 +34,11 @@
                               <div class="elementor-shortcode">
                                  <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-723" method="post" data-id="723" data-name="" data-inited-keypress="1">
                                     <div class="mc4wp-form-fields">
-                                       <p>
-                                          <input type="email" name="EMAIL" placeholder="Nhập địa chỉ e-mail của bạn" required="" class="fill_inited">
-                                       </p>
-                                       <p>
-                                          <input type="submit" value="Gửi đi">
-                                       </p>
+                                       <div><input type="email" name="EMAIL" placeholder="Nhập địa chỉ e-mail của bạn" required="" class="fill_inited" /></div>
+                                       <div><input type="submit" value="Gửi đi" /></div>
                                     </div>
-                                    <label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" class="fill_inited"></label><input type="hidden" name="_mc4wp_timestamp" value="1737180069"><input type="hidden" name="_mc4wp_form_id" value="723"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1">
-                                    <div class="mc4wp-response"></div>
+                                    {{-- <label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" class="fill_inited"></label><input type="hidden" name="_mc4wp_timestamp" value="1737180069"><input type="hidden" name="_mc4wp_form_id" value="723"><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1">
+                                    <div class="mc4wp-response"></div> --}}
                                  </form>
                                  <!-- / Mailchimp for WordPress Plugin -->
                               </div>

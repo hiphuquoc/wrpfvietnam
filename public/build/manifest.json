@@ -5,7 +5,7 @@
     "src": "resources/sources/admin/style.scss"
   },
   "resources/sources/main/cart-first-view.scss": {
-    "file": "assets/cart-first-view-a884f11e.css",
+    "file": "assets/cart-first-view-44fbb8b9.css",
     "isEntry": true,
     "src": "resources/sources/main/cart-first-view.scss"
   },
@@ -15,7 +15,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/category-blog-first-view.scss": {
-    "file": "assets/category-blog-first-view-8d957ed2.css",
+    "file": "assets/category-blog-first-view-acd489aa.css",
     "isEntry": true,
     "src": "resources/sources/main/category-blog-first-view.scss"
   },
@@ -35,7 +35,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/home-first-view.scss": {
-    "file": "assets/home-first-view-3a586753.css",
+    "file": "assets/home-first-view-d1ae0ed5.css",
     "isEntry": true,
     "src": "resources/sources/main/home-first-view.scss"
   },
@@ -45,7 +45,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/page-first-view.scss": {
-    "file": "assets/page-first-view-867a10c5.css",
+    "file": "assets/page-first-view-df9c93c0.css",
     "isEntry": true,
     "src": "resources/sources/main/page-first-view.scss"
   },
@@ -55,7 +55,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/product-first-view.scss": {
-    "file": "assets/product-first-view-68dc7334.css",
+    "file": "assets/product-first-view-d3f6cbb4.css",
     "isEntry": true,
     "src": "resources/sources/main/product-first-view.scss"
   },
@@ -65,7 +65,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/trainer-first-view.scss": {
-    "file": "assets/trainer-first-view-cc97c164.css",
+    "file": "assets/trainer-first-view-34b90b67.css",
     "isEntry": true,
     "src": "resources/sources/main/trainer-first-view.scss"
   },

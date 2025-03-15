@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
+    margin: 1rem 0 3rem 0;
     &_item {
         display: flex;
         flex-direction: column;
@@ -64,6 +65,41 @@
                 font-weight: bold;
                 letter-spacing: 0.5px;
 
+            }
+        }
+    }
+    // @media(max-width: 1199px){
+    //     font-size: 3.5rem !important;
+    //     line-height: 4.5rem !important;
+    // }
+    @media(max-width: 1023px){
+        gap: 1.5rem;
+        &_item {
+            width: calc(33.33% - 1rem);
+        }
+    }
+    @media(max-width: 767px){
+        margin: 0.75rem 0 2.5rem 0;
+        &_item {
+            width: calc(50% - 0.75rem);
+        }
+    }
+    @media(max-width: 577px){
+        gap: 1rem;
+        margin: 0.25rem 0 2.25rem 0;
+        &_item {
+            width: calc(50% - 0.5rem);
+            &_content {
+                padding: 1rem 1rem 1.25rem 1rem;
+                &_title {
+                    h2, h3, h4 {
+                        font-size: 1.4rem;
+                    }
+                }
+                &_price {
+                    font-size: 1.2rem;
+                    width: 100%;
+                }
             }
         }
     }

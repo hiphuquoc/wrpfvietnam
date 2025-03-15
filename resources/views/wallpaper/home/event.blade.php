@@ -8,19 +8,16 @@
                      class="sc_title sc_title_default">
                      <span class="sc_item_subtitle sc_title_subtitle sc_align_center sc_item_subtitle_above sc_item_title_style_default">Sự kiện</span>
                      <h1 class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default sc_item_title_tag">
-                        <span class="sc_item_title_text">Các giải đấu<br> Sắp được tổ chức</span>
+                        <span class="sc_item_title_text">
+                           <div>Các giải đấu</div>
+                           <div>Sắp được tổ chức</div>
+                        </span>
                      </h1>
                   </div>
                   <!-- /.sc_title -->		
                </div>
             </div>
-            <div class="elementor-element elementor-element-38bb30c sc_fly_static elementor-widget elementor-widget-spacer" data-id="38bb30c" data-element_type="widget" data-widget_type="spacer.default">
-               <div class="elementor-widget-container">
-                  <div class="elementor-spacer">
-                     <div class="elementor-spacer-inner"></div>
-                  </div>
-               </div>
-            </div>
+
             <div class="elementor-element elementor-element-0217818 sc_fly_static elementor-invisible elementor-widget elementor-widget-trx_sc_blogger" data-id="0217818" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="trx_sc_blogger.default">
                <div class="elementor-widget-container">
                   <div  id="trx_sc_blogger_196872966"		class="sc_blogger sc_blogger_default sc_blogger_default_over_bottom">
@@ -71,13 +68,7 @@
                   </div>
                </div>
             </div>
-            <div class="elementor-element elementor-element-c75f47f sc_fly_static elementor-widget elementor-widget-spacer" data-id="c75f47f" data-element_type="widget" data-widget_type="spacer.default">
-               <div class="elementor-widget-container">
-                  <div class="elementor-spacer">
-                     <div class="elementor-spacer-inner"></div>
-                  </div>
-               </div>
-            </div>
+
             <div class="elementor-element elementor-element-d50ce42 sc_fly_static elementor-invisible elementor-widget elementor-widget-trx_sc_button" data-id="d50ce42" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="trx_sc_button.default">
                <div class="elementor-widget-container">
                   <div id="trx_sc_button_657178319"	class="sc_item_button sc_button_wrap sc_align_center">

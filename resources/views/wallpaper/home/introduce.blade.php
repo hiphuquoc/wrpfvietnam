@@ -17,7 +17,10 @@
                      class="sc_title sc_title_default">
                      <span class="sc_item_subtitle sc_title_subtitle sc_item_subtitle_above sc_item_title_style_default">Hướng dẫn</span>
                      <h1 class="sc_item_title sc_title_title sc_item_title_style_default sc_item_title_tag">
-                        <span class="sc_item_title_text">Quy định chung<br/>và Luật thi đấu</span>
+                        <span class="sc_item_title_text">
+                           <div>Quy định chung</div> 
+                           <div>và Luật thi đấu</div>
+                        </span>
                      </h1>
                   </div>
                   <!-- /.sc_title -->		
@@ -30,7 +33,7 @@
             </div>
             <section class="elementor-section elementor-inner-section elementor-element elementor-element-005ff96 scheme_dark elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="005ff96" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                <div class="elementor-background-overlay"></div>
-               <div class="elementor-container elementor-column-gap-extended">
+               <div class="elementor-container elementor-column-gap-extended" style="padding-left:0 !important;padding-right:0 !important;">
                   <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-cc53cc7 sc_inner_width_none sc_layouts_column_icons_position_left" data-id="cc53cc7" data-element_type="column">
                      <div class="elementor-widget-wrap elementor-element-populated">
                         <div class="elementor-element elementor-element-73dd6f7 video_icon sc_fly_static elementor-widget elementor-widget-trx_sc_layouts_iconed_text" data-id="73dd6f7" data-element_type="widget" data-widget_type="trx_sc_layouts_iconed_text.default">

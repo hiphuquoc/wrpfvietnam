@@ -16,15 +16,16 @@
 // @import 'childs/modal.scss';
 
 .boxHomeItem {
-    margin: 100px 0 110px 0;
+    margin: 100px 0;
     @media(max-width: 1199px){
-        margin: 80px 0 90px 0;
+        margin: 80px 0;
     }
     @media(max-width: 1023px){
-        margin: 60px 0 70px 0;
+        margin: 60px 0 ;
     }
     @media(max-width: 767px){
-        margin: 50px 0 60px 0;
+        margin: 50px 0;
+        padding: 0 12.5px;
     }
 }
 

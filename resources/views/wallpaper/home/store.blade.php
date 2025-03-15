@@ -12,14 +12,7 @@
                      <!-- /.sc_title -->		
                   </div>
                </div>
-               <div class="elementor-element elementor-element-8ff15ca sc_fly_static elementor-widget elementor-widget-spacer">
-                  <div class="elementor-widget-container">
-                     <div class="elementor-spacer">
-                        <div class="elementor-spacer-inner"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="elementor-element elementor-element-fb2b381 sc_fly_static elementor-widget elementor-widget-shortcode animated slideInUp">
+               <div class="animated slideInUp">
                   <div class="elementor-widget-container">
 
                      <!-- danh sách sản phẩm -->
