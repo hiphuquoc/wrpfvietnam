@@ -305,7 +305,17 @@ class RoutingController extends Controller{
                                             })
                                             ->with('seo', 'seos.infoSeo.contents')
                                             ->first();
-                    $xhtml              = view('wallpaper.teacherDetail.index', compact('item', 'itemSeo', 'language', 'breadcrumb'))->render();
+                    /* lấy thông tin cho menu */
+                    $categoriesBlog     = CategoryBlog::select('*')
+                                            ->where('flag_show', 1)
+                                            ->get();
+                    $categoriesLv2      = Category::select('*')
+                                            ->whereHas('seos.infoSeo', function($query) use($language){
+                                                $query->where('level', 2)
+                                                    ->where('language', $language);
+                                            })
+                                            ->get();
+                    $xhtml              = view('wallpaper.teacherDetail.index', compact('item', 'itemSeo', 'categoriesBlog', 'categoriesLv2', 'language', 'breadcrumb'))->render();
                 }
                 /* Ghi dữ liệu - Xuất kết quả */
                 if($flagMatch==true){

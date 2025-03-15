@@ -24,7 +24,7 @@
                                     style="filter: brightness(30%) contrast(120%);"
                                  />
 
-                                 <rs-layer
+                                 {{-- <rs-layer
                                     id="slider-8-slide-18-layer-0" 
                                     data-type="text"
                                     data-color="#d72323"
@@ -42,8 +42,7 @@
                                     style="z-index:12;font-family:'Arizonia';font-size:20px !important;"
                                     >Wrpf Vietnam
                                  </rs-layer>
-                                 <!--
-                                    -->
+                                 
                                  <rs-layer
                                     id="slider-8-slide-18-layer-1" 
                                     data-type="text"
@@ -62,8 +61,7 @@
                                     style="z-index:11;font-family:'Alatsi';"
                                     >TRANG BỊ
                                  </rs-layer>
-                                 <!--
-                                    -->
+                                 
                                  <rs-layer
                                     id="slider-8-slide-18-layer-2" 
                                     data-type="text"
@@ -82,8 +80,7 @@
                                     style="z-index:10;font-family:'Alatsi';text-transform:uppercase;"
                                     >DỤNG CỤ CHUẨN WRPF
                                  </rs-layer>
-                                 <!--
-                                    -->
+                                 
                                  <rs-layer
                                     id="slider-8-slide-18-layer-3" 
                                     data-type="text"
@@ -102,8 +99,7 @@
                                     style="z-index:9;font-family:'Alatsi';text-transform:uppercase;font-size:18px;"
                                     >DÀNH CHO BẠN
                                  </rs-layer>
-                                 <!--
-                                    --><a
+                                 <a
                                     id="slider-8-slide-18-layer-4" 
                                     class="rs-layer rev-slider-button rev-btn"
                                     href="/cua-hang" target="_self" rel="nofollow"
@@ -121,8 +117,8 @@
                                     data-frame_hover="c:#d72323;bgc:#f1ede1;bor:0px,0px,0px,0px;sp:200ms;"
                                     style="z-index:8;background-color:#d72323;font-family:'Alatsi';text-transform:uppercase;"
                                     >Mua sắm ngay!
-                                 </a><!--
-                                    -->
+                                 </a>
+                                 
                                  <rs-layer
                                     id="slider-8-slide-18-layer-5" 
                                     data-type="shape"
@@ -135,16 +131,15 @@
                                     data-frame_999="o:0;st:w;sR:12700;"
                                     style="z-index:13;background:linear-gradient(rgba(22,18,15,1) 0%, rgba(22,18,15,0) 100%);"
                                     > 
-                                 </rs-layer>	
+                                 </rs-layer>	 --}}
 
                               </rs-slide>
 
                               <!-- slider 2 -->
                               <rs-slide style="position: absolute;" data-key="rs-19" data-title="Slide" data-thumb="https://wrpfvietnam.storage.googleapis.com/storage/images/wrpfvietnam-slider-2-mini.webp" data-anim="adpr:false;f:nodelay;" data-in="x:(100%);m:true;col:5;" data-alttrans="slotslide-vertical">
                                  <img decoding="async" src="//rumble.ancorathemes.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="slider home 2 of wrpfvietnam" title="slider-karate_2-copyright" width="1920" height="1000" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="https://wrpfvietnam.storage.googleapis.com/storage/images/wrpfvietnam-slider-2.webp" data-no-retina>
-                                 <!--
-                                    -->
-                                 <rs-layer
+                                 
+                                 {{-- <rs-layer
                                     id="slider-8-slide-19-layer-0" 
                                     data-type="text"
                                     data-color="#d72323"
@@ -162,8 +157,7 @@
                                     style="z-index:12;font-family:'Arizonia';font-size:20px !important;"
                                     >Wrpf Vietnam
                                  </rs-layer>
-                                 <!--
-                                    -->
+                                 
                                  <rs-layer
                                     id="slider-8-slide-19-layer-1" 
                                     data-type="text"
@@ -182,8 +176,7 @@
                                     style="z-index:11;font-family:'Alatsi';"
                                     >GHI DANH
                                  </rs-layer>
-                                 <!--
-                                    -->
+                                 
                                  <rs-layer
                                     id="slider-8-slide-19-layer-2" 
                                     data-type="text"
@@ -202,8 +195,7 @@
                                     style="z-index:10;font-family:'Alatsi';text-transform:uppercase;"
                                     >THAM GIA
                                  </rs-layer>
-                                 <!--
-                                    -->
+                                 
                                  <rs-layer
                                     id="slider-8-slide-19-layer-3" 
                                     data-type="text"
@@ -222,8 +214,7 @@
                                     style="z-index:9;font-family:'Alatsi';text-transform:uppercase;font-size:18px;"
                                     >GIẢI ĐẤU SẮP TỚI 
                                  </rs-layer>
-                                 <!--
-                                    --><a
+                                 <a
                                     id="slider-8-slide-19-layer-4" 
                                     class="rs-layer rev-slider-button rev-btn"
                                     href="/" target="_self" rel="nofollow"
@@ -241,8 +232,7 @@
                                     data-frame_hover="c:#d72323;bgc:#f1ede1;bor:0px,0px,0px,0px;sp:200ms;"
                                     style="z-index:8;background-color:#d72323;font-family:'Alatsi';text-transform:uppercase;"
                                     >Đăng ký ngay!
-                                 </a><!--
-                                    -->
+                                 </a>
                                  <rs-layer
                                     id="slider-8-slide-19-layer-5" 
                                     data-type="shape"
@@ -253,9 +243,8 @@
                                     data-frame_999="o:0;st:w;"
                                     style="z-index:13;background:linear-gradient(rgba(22,18,15,1) 0%, rgba(22,18,15,0) 100%);"
                                     > 
-                                 </rs-layer>
-                                 <!--
-                                    -->					
+                                 </rs-layer> --}}
+                                 					
                               </rs-slide>
 
                             </rs-slides>

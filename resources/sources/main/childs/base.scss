@@ -83,6 +83,15 @@ h1, h2 {
   @include titleDefault;
 }
 
+h2 {
+  font-size: 2rem !important;
+  line-height: 2.8rem !important;
+  @media(max-width: 1023px){
+    font-size: 1.75rem !important;
+    line-height: 2.5rem !important;
+  }
+}
+
 h2, h3, h4, h5, h6 {
   // margin-bottom: 0.5rem;
   color: $colorTitle;
@@ -119,11 +128,22 @@ h5, h6 {
   margin-bottom: 0.5rem;
   margin-top: 0 !important;
   margin-bottom: 1.5rem;
-  font-size: 3rem;
-  line-height: 3.8rem;
-  // @media(max-width: 767px){
-  //   margin-bottom: -0.25rem;
-  // }
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+  @media(max-width: 1199px){
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    margin-bottom: 1.25rem;
+  }
+  @media(max-width: 1023px){
+    font-size: 2.25rem;
+    line-height: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  @media(max-width: 767px){
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
 }
 
 form {
@@ -156,7 +176,16 @@ form {
 .distanceBetweenBox {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
+  @media(max-width: 1199px){
+      gap: 2.75rem;
+  }
+  @media(max-width: 1023px){
+      gap: 2.5rem;
+  }
+  @media(max-width: 767px){
+      gap: 2.25rem;
+  }
 }
 .distanceBetweenSubbox {
   display: flex;

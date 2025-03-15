@@ -76,11 +76,6 @@
             <h1 class="titlePage">{{ $itemSeo->title ?? $item->seo->title ?? null }}</h1>
 
             <div class="distanceBetweenBox">
-                <!-- Gallery và Product detail -->
-                {{-- @include('wallpaper.product.body') --}}
-                
-                <!-- products -->
-                {{-- @include('wallpaper.home.store') --}}
                 <div class="productGridBox">
                     @if(!empty($products)&&$products->isNotEmpty())
 

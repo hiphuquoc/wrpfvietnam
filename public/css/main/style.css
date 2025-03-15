@@ -2899,7 +2899,7 @@ body.with_boxed_bg_image.body_style_boxed .page_wrap {
 
 .page_content_wrap {
   padding-top: 8.7rem;
-  padding-bottom: 9.4rem;
+  padding-bottom: 8rem;
 }
 
 .remove_margins .page_content_wrap {
@@ -7637,10 +7637,10 @@ ul.instagram-pics li:before {
 }
 
 .widget_area .post_item .post_title, aside .post_item .post_title {
-    font-size: 1.4rem;
-    line-height: 2rem;
-    letter-spacing: 0.5px;
-    font-weight: bold;
+    font-size: 1.4rem !important;
+    line-height: 2rem !important;
+    letter-spacing: 0.5px !important;
+    font-weight: bold !important;
 }
 
 .widget_area .post_item .post_thumb,

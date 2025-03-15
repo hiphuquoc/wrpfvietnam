@@ -65,37 +65,37 @@
 @endpush
 @push('scriptCustom')
     <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-            const imageContainer = document.querySelector(".infoAthleteBox_info_image");
-            const image = imageContainer.querySelector("img");
-            const footer = document.querySelector("footer"); // Lấy footer
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const imageContainer = document.querySelector(".infoAthleteBox_info_image");
+        //     const image = imageContainer.querySelector("img");
+        //     const footer = document.querySelector("footer"); // Lấy footer
 
-            const initialOffset = imageContainer.offsetTop; // Lưu vị trí ban đầu
-            const imageWidth = image.offsetWidth; // Lưu width ban đầu
-            let isFixed = false; // Trạng thái để tránh cập nhật liên tục
+        //     const initialOffset = imageContainer.offsetTop; // Lưu vị trí ban đầu
+        //     const imageWidth = image.offsetWidth; // Lưu width ban đầu
+        //     let isFixed = false; // Trạng thái để tránh cập nhật liên tục
 
-            window.addEventListener("scroll", function () {
-                const scrollY = window.scrollY || window.pageYOffset;
-                const footerOffset = footer.offsetTop; // Vị trí của footer
-                const imageHeight = image.offsetHeight; // Chiều cao của ảnh
-                const stopPosition = footerOffset - imageHeight - 120; // Vị trí cần dừng
+        //     window.addEventListener("scroll", function () {
+        //         const scrollY = window.scrollY || window.pageYOffset;
+        //         const footerOffset = footer.offsetTop; // Vị trí của footer
+        //         const imageHeight = image.offsetHeight; // Chiều cao của ảnh
+        //         const stopPosition = footerOffset - imageHeight - 120; // Vị trí cần dừng
 
-                if (scrollY >= initialOffset && scrollY < stopPosition && !isFixed) {
-                    // Khi cuộn đến vị trí ban đầu nhưng chưa chạm footer
-                    isFixed = true;
-                    image.style.position = "fixed";
-                    image.style.top = "100px"; // Cố định vị trí top
-                    image.style.left = imageContainer.getBoundingClientRect().left + "px"; // Giữ vị trí ngang
-                    image.style.width = imageWidth + "px"; // Giữ nguyên width
-                } else if ((scrollY < initialOffset || scrollY >= stopPosition) && isFixed) {
-                    // Khi cuộn về trên hoặc chạm footer
-                    isFixed = false;
-                    image.style.position = "relative";
-                    image.style.top = "0";
-                    image.style.left = "0";
-                }
-            });
-        });
+        //         if (scrollY >= initialOffset && scrollY < stopPosition && !isFixed) {
+        //             // Khi cuộn đến vị trí ban đầu nhưng chưa chạm footer
+        //             isFixed = true;
+        //             image.style.position = "fixed";
+        //             image.style.top = "100px"; // Cố định vị trí top
+        //             image.style.left = imageContainer.getBoundingClientRect().left + "px"; // Giữ vị trí ngang
+        //             image.style.width = imageWidth + "px"; // Giữ nguyên width
+        //         } else if ((scrollY < initialOffset || scrollY >= stopPosition) && isFixed) {
+        //             // Khi cuộn về trên hoặc chạm footer
+        //             isFixed = false;
+        //             image.style.position = "relative";
+        //             image.style.top = "0";
+        //             image.style.left = "0";
+        //         }
+        //     });
+        // });
 
     </script>
 @endpush

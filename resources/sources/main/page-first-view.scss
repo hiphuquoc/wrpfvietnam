@@ -16,10 +16,29 @@
 .pagePageBox {
     width: 100%;
     max-width: 85rem;
-    margin: 110px auto 100px auto;
+    margin: 8.7rem auto 8rem auto;
     display: flex;
     flex-direction: column;
     align-self: center;
+    
+    @media(max-width: 1279px){
+        margin-top: 8.2rem !important;
+        margin-bottom: 5.6rem !important;
+    }
+    @media(max-width: 1023px){
+        margin-top: 5.6rem !important;
+        margin-bottom: 5.6rem !important;
+    }
+    @media(max-width: 767px){
+        margin-top: 5rem !important;
+        margin-bottom: 5rem !important;
+        padding: 0 12.5px;
+    }
+    @media(max-width: 577px){
+        margin-top: 4.8rem !important;
+        margin-bottom: 4.8rem !important;
+        padding: 0 10px;
+    }
 }
 
 .aboutUsBox {
@@ -50,7 +69,9 @@
 }
 
 .filterRanking {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
@@ -86,16 +107,13 @@
             font-weight: 500;
             &::-webkit-scrollbar {
                 background-color: transparent;
-                // background: $colorBackgroundLv3;
                 width: 5px;
             }
             &::-webkit-scrollbar-thumb {
                 background-color: $colorBackgroundLv3;
                 border-radius: 1000px;
-                // -webkit-box-shadow: inset 0 0 6px $bg-03;
             }
             &::-webkit-scrollbar-track {
-                // -webkit-box-shadow: inset 0 0 6px $bg-03;
                 border-radius: 0.75rem;
                 background: transparent;
             }

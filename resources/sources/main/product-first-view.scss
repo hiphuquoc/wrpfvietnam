@@ -403,10 +403,32 @@
 .pageProduct {
     width: 100%;
     max-width: 85rem;
-    margin: 110px auto 100px auto;
+    margin: 8.7rem auto 8rem auto;
     display: flex;
     flex-direction: column;
     align-self: center;
+    
+    @media(max-width: 1279px){
+        margin-top: 8.2rem !important;
+        margin-bottom: 5.6rem !important;
+    }
+    @media(max-width: 1023px){
+        margin-top: 5.6rem !important;
+        margin-bottom: 5.6rem !important;
+    }
+    @media(max-width: 767px){
+        margin-top: 5rem !important;
+        margin-bottom: 5rem !important;
+        padding: 0 12.5px;
+    }
+    @media(max-width: 577px){
+        margin-top: 4.8rem !important;
+        margin-bottom: 4.8rem !important;
+        padding: 0 10px;
+    }
+    .productGridBox {
+        margin: 0 !important;
+    }
 }
 
 /* gallery */

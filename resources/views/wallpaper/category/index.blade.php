@@ -60,7 +60,7 @@
     <!-- share social -->
     @include('wallpaper.template.shareSocial')
     <!-- content -->
-    <div class="articleBox distanceBetweenBox">
+    <div class="articleBox">
        <div class="distanceBetweenSubbox">
             <!-- breadcrumb -->
             @include('wallpaper.template.breadcrumb')
@@ -88,7 +88,7 @@
        </div>
         <!-- Nội dung -->
         @if(!empty($itemSeo->contents))
-            <div id="js_buildTocContentMain_element" class="distanceBetweenBox contentElement maxContent-1200">
+            <div id="js_buildTocContentMain_element" class="contentElement maxContent-1200">
                 <div class="contentBox">
                     <div id="tocContentMain">{!! $dataContent['toc_content'] !!}</div>
                     {!! $dataContent['content'] !!}
