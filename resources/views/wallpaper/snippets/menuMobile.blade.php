@@ -16,27 +16,41 @@
                     </a>
                 </li>
                 <li>
-                    <div onclick="showHideListMenuMobile(this);">
-                        <i class="fas fa-umbrella-beach"></i>
-                        <span class="nav-mobile_main__title">Tour Du Lịch</span>
-                        <span class="nav-mobile_main__arrow"><i class="fas fa-chevron-right"></i></span>
-                    </div>
-                    <ul style="display:none;">
-                        <li>
-                            <div onclick="showHideListMenuMobile(this);">
-                                <span class="nav-mobile_main__title">Tour Biển Đảo</span>
-                            </div>
-                            <ul style="display:none;">
-                                <li>
-                                    <a href="/#" title="">
-                                        <div>Test</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <a href="/ve-wrpfvietnam" title="Giới thiệu về wrpfvietnam">
+                        <div><i class="fa-regular fa-address-card"></i>Về Wrpvietnam</div>
+                        <div class="right-icon"></div>
+                    </a>
                 </li>
-
+                <li>
+                    <a href="/bang-xep-hang" title="Bảng xếp hạng WrpfVietnam">
+                        <div><i class="fa-solid fa-ranking-star"></i>Xếp hạng</div>
+                        <div class="right-icon"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/cua-hang" title="Cửa hàng sản phẩm chất lượng của WrpfVietnam">
+                        <div><i class="fa-solid fa-bag-shopping"></i>Cửa hàng</div>
+                        <div class="right-icon"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/tin-tuc" title="Trang tin tức của WrpfVietnam">
+                        <div><i class="fa-solid fa-square-rss"></i>Tin tức</div>
+                        <div class="right-icon"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/giai-dau" title="Giải đấu của WrpfVietnam">
+                        <div><i class="fa-solid fa-dumbbell"></i>Giải đấu</div>
+                        <div class="right-icon"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/tai-lieu-world-raw-powerlifting-federation-vietnam" title="Tài liệu của WrpfVietnam">
+                        <div><i class="fa-solid fa-folder-open"></i>Tài liệu</div>
+                        <div class="right-icon"></div>
+                    </a>
+                </li>
                 <li>
                     <a href="/lien-he" title="Liên hệ {{ config('company.sortname') }}">
                         <i class="fa-solid fa-phone"></i>

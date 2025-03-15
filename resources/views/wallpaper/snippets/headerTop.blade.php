@@ -15,7 +15,7 @@
                     </a>                
                 </li>
                 <li class="hide-1023">
-                    <a href="/bang-xep-hang" title="Liên hệWrpfVietnam">
+                    <a href="/bang-xep-hang" title="Bảng xếp hạng WrpfVietnam">
                         <div>Xếp hạng</div>
                     </a>      
                 </li>
