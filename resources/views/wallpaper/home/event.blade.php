@@ -1,4 +1,4 @@
-<section class="elementor-section elementor-top-section elementor-element elementor-element-5d3e7e4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d3e7e4" data-element_type="section">
+<section class="boxHomeItem" data-id="5d3e7e4" data-element_type="section">
    <div class="elementor-container elementor-column-gap-extended">
       <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a77ad28 sc_inner_width_none sc_layouts_column_icons_position_left" data-id="a77ad28" data-element_type="column">
          <div class="elementor-widget-wrap elementor-element-populated">

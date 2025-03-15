@@ -1,0 +1,80 @@
+.elementor-2904 .elementor-element.elementor-element-a8f8d09, .elementor-2904 .elementor-element.elementor-element-e47fc76 {
+    @media(max-width: 1199px){
+        padding: 80px 0 100px 0 !important;
+    }
+    @media(max-width: 1023px){
+        padding: 60px 0 80px 0 !important;
+    }
+    @media(max-width: 767px){
+        padding: 40px 0 60px 0 !important;
+    }
+}
+
+.sc_title.sc_title_default .sc_item_subtitle {
+    @media(max-width: 1199px){
+        font-size: 2.75rem !important;
+    }
+    @media(max-width: 1023px){
+        font-size: 2.5rem !important;
+    }
+    @media(max-width: 767px){
+        font-size: 2.25rem !important;
+    }
+}
+
+.sc_title.sc_title_default .sc_item_title {
+    @media(max-width: 1199px){
+        font-size: 3.5rem !important;
+        line-height: 4.5rem !important;
+    }
+    @media(max-width: 1023px){
+        font-size: 3.25rem !important;
+        line-height: 4.25rem !important;
+    }
+}
+
+.sc_item_subtitle + .sc_item_title {
+    margin-top: 0 !important;
+}
+
+.elementor-2904 .elementor-element.elementor-element-01103d2 {
+    margin: 0 0 2.5rem 0 !important;
+    @media(max-width: 1199px){
+        margin: 0 0 2.25rem 0 !important;
+    }
+    @media(max-width: 1023px){
+        margin: 0 0 2rem 0 !important;
+    }
+    @media(max-width: 767px){
+        margin: 0 0 1.75rem 0 !important;
+    }
+}
+
+.elementor-widget:not(:last-child) {
+    @media(max-width: 1199px){
+        margin-block-end: 17.5px !important;
+    }
+    @media(max-width: 1023px){
+        margin-block-end: 15px !important;
+    }
+    @media(max-width: 767px){
+        margin-block-end: 12.5px !important;
+    }
+}
+
+/* box introduce */
+.elementor-2904 .elementor-element.elementor-element-065aba8>.elementor-element-populated.elementor-widget-wrap, .elementor-2904 .elementor-element.elementor-element-ccb1071>.elementor-element-populated.elementor-widget-wrap {
+    padding: 0 !important;
+}
+.elementor-2904 .elementor-element.elementor-element-005ff96:not(.elementor-motion-effects-element-type-background) {
+    margin-top: 1rem;
+    @media(max-width: 1199px){
+        margin-top: 0.75rem !important;
+    }
+    @media(max-width: 767px){
+        margin-top: 0.5rem !important;
+    }
+    // @media(max-width: 767px){
+    //     margin-block-end: 12.5px !important;
+    // }
+}

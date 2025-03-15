@@ -4,6 +4,7 @@
 @import 'childs/breadcrumb.scss';
 @import 'childs/menu.scss';
 @import 'childs/header-top.scss';
+@import 'childs/responsive.scss';
 /* Home ===== kém quan trọng (nhưng ít nên đưa vào đây luôn) */
 @import 'childs/product.scss';
 @import 'childs/footer.scss';
@@ -13,3 +14,46 @@
 
 // @import 'childs/login.scss';
 // @import 'childs/modal.scss';
+
+.boxHomeItem {
+    margin: 100px 0 110px 0;
+    @media(max-width: 1199px){
+        margin: 80px 0 90px 0;
+    }
+    @media(max-width: 1023px){
+        margin: 60px 0 70px 0;
+    }
+    @media(max-width: 767px){
+        margin: 50px 0 60px 0;
+    }
+}
+
+.introduceBox {
+    display: flex;
+    align-items: stretch;
+    gap: 3.5rem;
+    &_item {
+        width: 100% !important;
+        @media(max-width: 990px){
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                margin: 0 105px;
+            }
+            .elementor-widget-trx_sc_title, .sc_item_title, .elementor-widget-container {
+                text-align: center;
+                padding: 0 !important; 
+            }
+        }
+
+        @media(max-width: 767px){ 
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    @media(max-width: 1199px){
+        gap: 3rem;
+    }
+}

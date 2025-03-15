@@ -156,6 +156,14 @@
             display: none !important;
         }
     }
+    @media(max-width: 767px){
+        &_show {
+            &_icon {
+                width: 1.55rem;
+                height: 1.55rem;
+            }
+        }
+    }
 }
 .emptyCartBox {
     background: $colorBackgroundLv2;

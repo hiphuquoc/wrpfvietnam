@@ -1,5 +1,5 @@
 @if(!empty($products)&&$products->isNotEmpty())
-   <section class="elementor-section elementor-inner-section elementor-element elementor-element-f49b916 elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+   <section class="boxHomeItem">
       <div class="elementor-container elementor-column-gap-extended">
          <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-dc35fd1 sc_inner_width_none sc_layouts_column_icons_position_left">
             <div class="elementor-widget-wrap elementor-element-populated">
