@@ -232,6 +232,12 @@ p, ul, ol, h2, h3, h4, h5, h6 {
   }
 }
 
+p, ul, ol {
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
 ul, ol {
   margin-right: unset;
   margin-left: 1rem;

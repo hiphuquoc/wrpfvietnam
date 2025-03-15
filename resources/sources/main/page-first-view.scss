@@ -61,10 +61,27 @@
         width: 45%;
         &_title {
             h2 {
-                margin-bottom: 2rem;
-                font-size: 2.5rem;
+                margin-top: 0 !important;
+                margin-bottom: 1rem;
             }
         }
+    }
+    @media(max-width: 1199px){
+        
+    }
+    @media(max-width: 1023px){
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-right: 0 !important;
+        &:not(:last-child){
+            margin-bottom: 1.5rem;
+        }
+        > * {
+            width: 100%;
+        }
+    }
+    @media(max-width: 767px){
+        
     }
 }
 
