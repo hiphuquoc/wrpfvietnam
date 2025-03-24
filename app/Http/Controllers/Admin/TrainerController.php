@@ -94,8 +94,8 @@ class TrainerController extends Controller {
     }
 
     public function createAndUpdate(TrainerRequest $request){
-        try {
-            DB::beginTransaction();
+        // try {
+        //     DB::beginTransaction();
             /* ngôn ngữ */
             $idSeo              = $request->get('seo_id');
             $idSeoVI            = $request->get('seo_id_vi') ?? 0;
@@ -154,34 +154,34 @@ class TrainerController extends Controller {
                     'seo_id'            => $idSeo,
                     'trainer_info_id'   => $idTrainer,
                 ]);
-                DB::commit();
-                /* Message */
-                $message        = [
-                    'type'      => 'success',
-                    'message'   => '<strong>Thành công!</strong> Đã cập nhật Vận động viên!'
-                ];
-                /* nếu có tùy chọn index => gửi google index */
-                if(!empty($request->get('index_google'))&&$request->get('index_google')=='on') {
-                    $flagIndex = IndexController::indexUrl($idSeo);
-                    if($flagIndex==200){
-                        $message['message'] = '<strong>Thành công!</strong> Đã cập nhật Vận động viên và Báo Google Index!';
-                    }else {
-                        $message['message'] = '<strong>Thành công!</strong> Đã cập nhật Vận động viên <span style="color:red;">nhưng báo Google Index lỗi</span>';
-                    }
-                }
+                // DB::commit();
+                // /* Message */
+                // $message        = [
+                //     'type'      => 'success',
+                //     'message'   => '<strong>Thành công!</strong> Đã cập nhật Vận động viên!'
+                // ];
+                // /* nếu có tùy chọn index => gửi google index */
+                // if(!empty($request->get('index_google'))&&$request->get('index_google')=='on') {
+                //     $flagIndex = IndexController::indexUrl($idSeo);
+                //     if($flagIndex==200){
+                //         $message['message'] = '<strong>Thành công!</strong> Đã cập nhật Vận động viên và Báo Google Index!';
+                //     }else {
+                //         $message['message'] = '<strong>Thành công!</strong> Đã cập nhật Vận động viên <span style="color:red;">nhưng báo Google Index lỗi</span>';
+                //     }
+                // }
             }
-        } catch (\Exception $exception){
-            DB::rollBack();
-        }
-        /* có lỗi mặc định Message */
-        if(empty($message)){
-            $message        = [
-                'type'      => 'danger',
-                'message'   => '<strong>Thất bại!</strong> Có lỗi xảy ra, vui lòng thử lại'
-            ];
-        }
-        $request->session()->put('message', $message);
-        return redirect()->route('admin.trainer.view', ['id' => $idTrainer, 'language' => $language]);
+        // } catch (\Exception $exception){
+        //     DB::rollBack();
+        // }
+        // /* có lỗi mặc định Message */
+        // if(empty($message)){
+        //     $message        = [
+        //         'type'      => 'danger',
+        //         'message'   => '<strong>Thất bại!</strong> Có lỗi xảy ra, vui lòng thử lại'
+        //     ];
+        // }
+        // $request->session()->put('message', $message);
+        // return redirect()->route('admin.trainer.view', ['id' => $idTrainer, 'language' => $language]);
     }
 
     public function createUser(){

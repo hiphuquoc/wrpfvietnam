@@ -10,10 +10,11 @@ use App\Models\CategoryBlog;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\Admin\HelperController;
 use App\Http\Controllers\Admin\TagController;
-
+use App\Http\Controllers\Admin\TrainerController;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ClassInfo;
 
 use GuzzleHttp\Client;
 
@@ -26,7 +27,9 @@ use Maatwebsite\Excel\Facades\Excel;
 
 use Illuminate\Support\Facades\Hash;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
+use App\Http\Requests\TrainerRequest;
 
 class HomeController extends Controller {
     public static function home(Request $request, $language = 'vi'){
@@ -126,7 +129,6 @@ class HomeController extends Controller {
         //     $product->delete();
         //     ++$i;
         // }
-        
     }
 
     private static function normalizeUnicode($string) {

@@ -56,46 +56,44 @@ class CreateAthlete extends Command {
 
         $count          = 0;
         foreach($trainers as $trainer){
-            // insert dữ liệu
-            $seoTitle   = "Vận động viên ".$trainer['name']." dữ liệu từ WRPF Việt Nam | WRPFVietnam.com";
-            $infoClass  = ClassInfo::select('*')
-                            ->where('name', 'LIKE', $trainer['class_name'].'%')
-                            ->first();
-            $slug       = \App\Helpers\Charactor::convertStrToUrl($trainer['name']);
-            $data = [
-                "seo_id" => "72668",
-                "seo_id_vi" => "0",
-                "trainer_info_id" => "0",
-                "language" => "vi",
-                "type" => "copy",
-                "start_pwl" => "2015",
-                "team" => "Tự do",
-                "parent" => "72665",
-                "rating_aggregate_count" => "8452",
-                "rating_aggregate_star" => "4.7",
-                /* biến số */
-                "title" => $trainer['name'],
-                "sex" => $trainer['sex'],
-                "birth_day" => $trainer['birth_day'],
-                "phone" => $trainer['phone'],
-                "email" => $trainer['email'],
-                "class_id" => $infoClass->id,
-                "seo_title" => $seoTitle,
-                "seo_description" => $seoTitle,
-                "slug" => $slug,
-            ];
+            if(!empty($trainer['name'])){
+                // insert dữ liệu
+                $seoTitle   = "Vận động viên ".$trainer['name']." dữ liệu từ WRPF Việt Nam | WRPFVietnam.com";
+                $infoClass  = ClassInfo::select('*')
+                                ->where('name', 'LIKE', $trainer['class_name'].'%')
+                                ->first();
+                $slug       = \App\Helpers\Charactor::convertStrToUrl($trainer['name']);
+                $data = [
+                    "seo_id" => 0,
+                    "seo_id_vi" => 0,
+                    "trainer_info_id" => 0,
+                    "language" => "vi",
+                    "type" => "copy",
+                    "start_pwl" => "2015",
+                    "team" => "Tự do",
+                    "parent" => "72664",
+                    "rating_aggregate_count" => "8452",
+                    "rating_aggregate_star" => "4.7",
+                    /* biến số */
+                    "title" => $trainer['name'],
+                    "sex" => $trainer['sex'],
+                    "birth_day" => $trainer['birth_day'],
+                    "phone" => $trainer['phone'],
+                    "email" => $trainer['email'],
+                    "class_id" => $infoClass->id,
+                    "seo_title" => $seoTitle,
+                    "seo_description" => $seoTitle,
+                    "slug" => $slug,
+                ];
 
-            // Tạo request giả lập
-            $request = TrainerRequest::create(route('admin.trainer.view'), 'POST', $data);
-
-            // Gán session vào request
-            $request->setLaravelSession(session());
-
-            // Gọi controller
-            $controller = app(TrainerController::class);
-            $flag = $controller->createAndUpdate($request);
-
-            if($flag) ++$count;
+                dispatch(function () use ($data) {
+                    $request = TrainerRequest::create(route('admin.trainer.view'), 'POST', $data);
+                    $request->setLaravelSession(session());
+                    
+                    $controller = app(TrainerController::class);
+                    $controller->createAndUpdate($request);
+                });
+            }
         }
         
         $this->info("🎉 Đã tạo {$count} vận động viên thành công!");
