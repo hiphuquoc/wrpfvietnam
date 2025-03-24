@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('trainer_info', function (Blueprint $table) {
             $table->id();
             $table->integer('seo_id');
-            // $table->text('full_name');
-            // $table->text('job'); không dùng job vì đa ngôn ngữ, sử dụng chung với title Seo
+            $table->boolean('sex')->default(0)->nullable(); /* 1 là nam, 0 là nữ */
+            $table->text('birth_day');
             $table->text('phone');
             $table->text('email');
-            // $table->text('summary')->nullable();
-            // $table->timestamps();
+            $table->text('start_pwl')->nullable();
+            $table->text('class_id');
+            $table->text('team')->nullable();
         });
     }
 

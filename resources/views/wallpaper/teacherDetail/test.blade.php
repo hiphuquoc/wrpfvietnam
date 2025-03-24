@@ -1,6 +1,9 @@
 <div class="infoAthleteBox">
     <div class="infoAthleteBox_item image">
-        <img src="https://liendoancutathehinhhcm.storage.googleapis.com/storage/images/luu-manh-cuong-small.webp" alt="" title="" />
+        @php
+            $image = Storage::url('images/image-default-660x660.png');
+        @endphp
+        <img src="{{ $image }}" alt="" title="" />
     </div>
 
     <div class="infoAthleteBox_item detail">
@@ -11,27 +14,27 @@
         <div class="infoAthleteBox_item_box">
             <div class="infoAthleteBox_item_box_item">
                 <div><i class="fa-solid fa-venus-mars"></i> Giới tính:</div>
-                <div>Nam</div>
+                <div>{{ config('main_'.env('APP_NAME').'.sex.'.$item->sex.'.name') }}</div>
             </div>
             <div class="infoAthleteBox_item_box_item">
                 <div><i class="fa-solid fa-cake-candles"></i> Năm sinh:</div>
-                <div>1998</div>
+                <div>{{ $item->birth_day ?? '' }}</div>
             </div>
             <div class="infoAthleteBox_item_box_item">
                 <div><i class="fa fa-phone" aria-hidden="true"></i> Liên hệ:</div>
-                <div>0927621636 - vandongvien1@gmail.com</div>
+                <div>{{ $item->phone ?? '' }} - {{ !empty($item->email) ? strtolower($item->email) : '' }}</div>
             </div>
             <div class="infoAthleteBox_item_box_item">
                 <div><i class="fa-solid fa-calendar-days"></i> Bắt đầu tập Pwl:</div>
-                <div>11/2010</div>
+                <div>{{ $item->start_pwl ?? '' }}</div>
             </div>
             <div class="infoAthleteBox_item_box_item">
                 <div><i class="fa-solid fa-dumbbell"></i> Hạng cân:</div>
-                <div>80 kg</div>
+                <div>{{ $item->classWeight->name ?? '-' }} kg</div>
             </div>
             <div class="infoAthleteBox_item_box_item">
                 <div><i class="fa-solid fa-star"></i> Team /VĐV tự do:</div>
-                <div>Liên đoàn WrpfVietnam</div>
+                <div>{{ $item->team ?? '' }}</div>
             </div>
         </div>
     </div>

@@ -188,4 +188,12 @@ return [
         'gpt-4o', 'gpt-4o-mini', 
     ],
     'percent_discount_default'  => '0.4', /* hệ số giá mặc định khi không lấy được thông tin GPS và IP của khách hàng */
+    'sex' => [
+        0 => [
+            'name'  => "Nữ",
+        ],
+        1 => [
+            'name'  => "Nam",
+        ],
+    ]
 ];

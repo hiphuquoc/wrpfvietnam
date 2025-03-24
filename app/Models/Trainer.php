@@ -9,8 +9,13 @@ class Trainer extends Model {
     use HasFactory;
     protected $table        = 'trainer_info';
     protected $fillable     = [
+        'sex',
+        'birth_day',
         'phone',
         'email',
+        'start_pwl',
+        'class_id',
+        'team',
     ];
     public $timestamps = false;
 
@@ -56,6 +61,10 @@ class Trainer extends Model {
 
     public function seos() {
         return $this->hasMany(\App\Models\RelationSeoTrainerInfo::class, 'trainer_info_id', 'id');
+    }
+
+    public function classWeight() {
+        return $this->hasOne(\App\Models\ClassInfo::class, 'id', 'class_id');
     }
 
     public function achievements() {

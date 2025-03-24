@@ -74,7 +74,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- thành tích -->
+
+                    {{-- <!-- thành tích -->
                     <div class="pageAdminWithRightSidebar_main_content_item repeater">
                         <div class="card">
                             <div class="card-header border-bottom">
@@ -290,7 +291,7 @@
                                 </div>
                             @endforeach
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
                 <!-- END:: Main content -->

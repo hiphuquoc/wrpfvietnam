@@ -10,7 +10,7 @@ use App\Models\CategoryBlog;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\Admin\HelperController;
 use App\Http\Controllers\Admin\TagController;
-use App\Http\Controllers\Admin\TranslateController;
+
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Product;
@@ -25,19 +25,8 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Maatwebsite\Excel\Facades\Excel;
 
 use Illuminate\Support\Facades\Hash;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
-// use App\Models\RelationSeoTagInfo;
-// use App\Models\RelationSeoPageInfo;
-// use App\Models\Wallpaper;
-// use Google\Client as Google_Client;
-// use Illuminate\Support\Facades\DB;
-
-// use Illuminate\Support\Facades\Mail;
-// use App\Mail\SendProductMail;
-
-// use DOMDocument;
-// use PDO;
-// use PhpParser\Node\Stmt\Switch_;
 
 class HomeController extends Controller {
     public static function home(Request $request, $language = 'vi'){
@@ -137,13 +126,6 @@ class HomeController extends Controller {
         //     $product->delete();
         //     ++$i;
         // }
-                    
-
-        // dd(123);
-
-        $password = Hash::make('wrpfvietnamCOM@mk123');
-
-        dd($password);
         
     }
 

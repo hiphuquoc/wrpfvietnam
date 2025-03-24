@@ -23,8 +23,12 @@ class TrainerRequest extends FormRequest {
     public function rules() {
         return [
             'title'                     => 'required',
+            'birth_day'                 => 'required',
             'phone'                     => 'required',
             'email'                     => 'required',
+            'start_pwl'                 => 'required',
+            'class_id'                  => 'required',
+            'team'                      => 'required',
             'ordering'                  => 'min:0',
             'seo_title'                 => 'required',
             'seo_description'           => 'required',
@@ -57,9 +61,13 @@ class TrainerRequest extends FormRequest {
 
     public function messages() {
         return [
-            'title.required'            => 'Họ và tên & Chức vụ không được để trống!',
+            'title.required'            => 'Họ và tên không được để trống!',
+            'birth_day.required'        => 'Năm sinh không được để trống!',
             'phone.required'            => 'Số điện thoại không được để trống!',
             'email.required'            => 'Email không được để trống!',
+            'start_pwl.required'        => 'Ngày bắt đầu tập Pwl không được để trống!',
+            'class_id.required'         => 'Hạng cân không được để trống!',
+            'team.required'             => 'Team /Tự do không được để trống!',
             'seo_title.required'        => 'Tiêu đề SEO không được để trống!',
             'seo_description.required'  => 'Mô tả SEO không được để trống!',
             'slug.required'             => 'Đường dẫn tĩnh không được để trống!',
