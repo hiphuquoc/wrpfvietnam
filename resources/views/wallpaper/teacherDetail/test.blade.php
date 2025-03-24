@@ -1,9 +1,13 @@
 <div class="infoAthleteBox">
     <div class="infoAthleteBox_item image">
         @php
-            $image = Storage::url('images/image-default-660x660.png');
+            $image      = Storage::url('images/image-default-660x660.png');
+            if(!empty($item->seo->image)){
+                $image  = \App\Helpers\Image::getUrlImageLargeByUrlImage($item->seo->image);
+            }
+            $title      = $item->seo->title ?? '';
         @endphp
-        <img src="{{ $image }}" alt="" title="" />
+        <img src="{{ $image }}" alt="{{ $title }}" title="{{ $title }}" />
     </div>
 
     <div class="infoAthleteBox_item detail">
