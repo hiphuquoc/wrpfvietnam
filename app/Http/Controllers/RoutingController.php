@@ -197,8 +197,13 @@ class RoutingController extends Controller{
                                         })
                                         ->get();
                     if($item->type->code=='ranking'){ /* trang xếp hạng */
-                        
                         $xhtml  = view('wallpaper.ranking.index', compact('item', 'itemSeo', 'categoriesBlog', 'categoriesLv2', 'language', 'breadcrumb'))->render(); 
+                    }else if($item->type->code=='athlete'){
+                        /* danh sách vận động viên */
+                        $trainers = Trainer::select('*')
+                                        ->with('seo', 'seos')
+                                        ->get();
+                        $xhtml  = view('wallpaper.athlete.index', compact('item', 'itemSeo', 'categoriesBlog', 'categoriesLv2', 'language', 'trainers', 'breadcrumb'))->render(); 
                     }else { /* trang bình thường */
                         /* xây dựng toc_content */
                         $htmlContent        = '';

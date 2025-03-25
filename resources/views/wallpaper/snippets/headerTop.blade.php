@@ -15,9 +15,30 @@
                     </a>                
                 </li>
                 <li class="hide-1023">
+                    <a href="/van-dong-vien" title="Vận động viên WrpfVietnam">
+                        <div>Vận động viên</div>
+                    </a>      
+                </li>
+                <li class="hide-1023">
                     <a href="/bang-xep-hang" title="Bảng xếp hạng WrpfVietnam">
                         <div>Xếp hạng</div>
                     </a>      
+                </li>
+            </ul>
+        </div>
+        <a href="/" title="Trang chủ WrpfVietnam" class="headerMain_item logoMain">
+            @if(!empty($item->type->code)&&$item->type->code=='home')
+                <h1 style="display:none;">{{ $item->seos[0]->infoSeo->title }}</h1>
+            @endif
+        </a>
+        <div class="headerMain_item">
+            <ul style="justify-content:flex-end;">
+                <li class="hide-1023">
+                    <a href="/giai-dau" title="Trang tin tức wrpfvietnam">
+                        <div>
+                            Giải đấu
+                        </div>
+                    </a>
                 </li>
                 @if(!empty($categoriesLv2)&&$categoriesLv2->isNotEmpty())
                     <li>
@@ -47,16 +68,6 @@
                         </div>
                     </li>
                 @endif
-                
-            </ul>
-        </div>
-        <a href="/" title="Trang chủ WrpfVietnam" class="headerMain_item logoMain">
-            @if(!empty($item->type->code)&&$item->type->code=='home')
-                <h1 style="display:none;">{{ $item->seos[0]->infoSeo->title }}</h1>
-            @endif
-        </a>
-        <div class="headerMain_item">
-            <ul style="justify-content:flex-end;">
                 @if(!empty($categoriesBlog))
                     <li class="hide-1023">
                         <a href="/tin-tuc" title="Trang tin tức wrpfvietnam">
@@ -85,13 +96,7 @@
                         </div>
                     </li>
                 @endif
-                <li class="hide-1023">
-                    <a href="/giai-dau" title="Trang tin tức wrpfvietnam">
-                        <div>
-                            Giải đấu
-                        </div>
-                    </a>
-                </li>
+                
                 @if(empty($item->type->code)||$item->type->code!='cart')
                     <li>
                         <div id="js_viewSortCart_idWrite">
@@ -99,14 +104,14 @@
                         </div>
                     </li>
                 @endif
-                <li>
+                {{-- <li>
                     <div>
                         <div class="languageBox">
                             <i class="fa-solid fa-globe"></i>
                             <div>VI</div>
                         </div>
                     </div>
-                </li>
+                </li> --}}
                 <li class="hide-1023">
                     <div class="viewMoreMenu">
                         <i class="fa-solid fa-bars"></i>

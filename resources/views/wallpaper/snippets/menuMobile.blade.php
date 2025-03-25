@@ -22,8 +22,20 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/van-dong-vien" title="Bảng xếp hạng WrpfVietnam">
+                        <div><i class="fa-solid fa-user"></i>Vận động viên</div>
+                        <div class="right-icon"></div>
+                    </a>
+                </li>
+                <li>
                     <a href="/bang-xep-hang" title="Bảng xếp hạng WrpfVietnam">
                         <div><i class="fa-solid fa-ranking-star"></i>Xếp hạng</div>
+                        <div class="right-icon"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/giai-dau" title="Giải đấu của WrpfVietnam">
+                        <div><i class="fa-solid fa-dumbbell"></i>Giải đấu</div>
                         <div class="right-icon"></div>
                     </a>
                 </li>
@@ -39,12 +51,7 @@
                         <div class="right-icon"></div>
                     </a>
                 </li>
-                <li>
-                    <a href="/giai-dau" title="Giải đấu của WrpfVietnam">
-                        <div><i class="fa-solid fa-dumbbell"></i>Giải đấu</div>
-                        <div class="right-icon"></div>
-                    </a>
-                </li>
+                
                 <li>
                     <a href="/tai-lieu-world-raw-powerlifting-federation-vietnam" title="Tài liệu của WrpfVietnam">
                         <div><i class="fa-solid fa-folder-open"></i>Tài liệu</div>

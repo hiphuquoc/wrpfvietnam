@@ -4,6 +4,16 @@
     "isEntry": true,
     "src": "resources/sources/admin/style.scss"
   },
+  "resources/sources/main/athlete-first-view.scss": {
+    "file": "assets/athlete-first-view-455e44c3.css",
+    "isEntry": true,
+    "src": "resources/sources/main/athlete-first-view.scss"
+  },
+  "resources/sources/main/athlete-non-first-view.scss": {
+    "file": "assets/home-non-first-view-1a84b608.css",
+    "isEntry": true,
+    "src": "resources/sources/main/category-blog-non-first-view.scss"
+  },
   "resources/sources/main/cart-first-view.scss": {
     "file": "assets/cart-first-view-f2d34ba7.css",
     "isEntry": true,
@@ -55,7 +65,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/product-first-view.scss": {
-    "file": "assets/product-first-view-12037526.css",
+    "file": "assets/product-first-view-85abc864.css",
     "isEntry": true,
     "src": "resources/sources/main/product-first-view.scss"
   },
@@ -65,7 +75,7 @@
     "src": "resources/sources/main/category-blog-non-first-view.scss"
   },
   "resources/sources/main/trainer-first-view.scss": {
-    "file": "assets/trainer-first-view-6996f211.css",
+    "file": "assets/trainer-first-view-6bfc3262.css",
     "isEntry": true,
     "src": "resources/sources/main/trainer-first-view.scss"
   },
